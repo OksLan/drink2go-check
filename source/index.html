@@ -73,6 +73,7 @@
       <h1 сlass="visually-hidden">Интернет-магазин по продаже кофейных напитков Drink2Go</h1>
 
       <section class="slider"></section>
+
       <section class="features">
         <p class="features__badge section__badge">Преимущества</p>
         <h2 class="features__heading section__heading">Главные причины выбрать Drink2Go</h2>
@@ -100,11 +101,31 @@
       <section class="catalog">
         <p class="features__badge section__badge">Каталог</p>
         <h2 class="features__heading section__heading">Каталог кофейных напитков</h2>
-        
+
         <div class="catalog__filter">
           <form class="catalog__filter filter">
 
-            <fieldset class="filter__group range">Цена</fieldset>
+            <fieldset class="filter__group">
+              <legend class="filter__title">Цена</legend>
+                <div class="price-slider">
+                    <div class="price-bar" style="left: 0; width: 280px">
+                      <button class="slider-pin min-pin" type="button">
+                        <span class="visually-hidden">Минимальная цена</span>
+                      </button>
+                      <button class="slider-pin max-pin" type="button">
+                        <span class="visually-hidden">Максимальная цена</span>
+                      </button>
+                    </div>
+                  </div>
+            </fieldset>
+
+              <div class="price-input-boxes">
+                <label for="low-price" class="price-label price-label-from">от</label>
+                <input class="low-price-input price-input price-field" name="price-input" id="low-price" placeholder="0">
+                <label for="high-price" class="price-label price-label-to">до</label>
+                <input class="high-price-input price-input price-field" name="price-input" id="high-price" placeholder="900">
+              </div>
+            </fieldset>
 
             <fieldset class="filter__group">
               <legend class="filter__title">Наличие молока</legend>
@@ -188,6 +209,7 @@
         </div>
 
         <div class="cards__list">
+
           <article class="cards__item card">
             <a class="card__link--img" href="#">
               <picture></picture>
