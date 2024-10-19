@@ -1,3 +1,7 @@
 /* здесь подключите шрифты */
-@include font-face("Montserrat", 400, normal, url("../../fonts/Montserrat-Regular.woff2") format("woff2"));
-@include font-face("Montserrat", 700, normal, url("../../fonts/Montserrat-Regular.woff2") format("woff2"));
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
