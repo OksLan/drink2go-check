@@ -1,0 +1,20 @@
+.page-header {
+  display: flex;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.page-header__nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  padding: 12px;
+}

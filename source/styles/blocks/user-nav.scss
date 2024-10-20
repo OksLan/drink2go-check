@@ -1,0 +1,47 @@
+.user-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.user-nav__item {
+  list-style: none;
+}
+
+.user-nav__link {
+  width: 60ps;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.user-nav__toggle {
+  background-color: $base-white;
+  color: $base-black;
+  width: 16px;
+  height: 12px;
+  position: relative;
+  border: none;
+  margin-left: auto;
+  padding: 0;
+  display: none;
+}
+
+.user-nav__toggle--open .user-nav__toggle {
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../../icons/stack.svg#burger");
+    display: block;
+  }
+}
+
+.ser-nav__toggle--close .user-nav__toggle {
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../../icons/stack.svg#cross");
+    display: block;
+  }
+}

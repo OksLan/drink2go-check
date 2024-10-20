@@ -1,0 +1,53 @@
+.features {
+  text-align: center;
+  padding: 50px 20px 60px;
+}
+
+.features__item {
+  list-style-type: none;
+  margin-bottom: 32px;
+}
+
+.feature__title {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.feature__text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.features__item {
+  list-style-type: none;
+  margin-bottom: 32px;
+}
+
+.features__item--one::before {
+  background-image: url("../../icons/stack.svg#speed");
+  background-size: 50px 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item--two::before {
+  background-image: url("../../icons/stack.svg#fit");
+  background-size: 52px 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item--three::before {
+  background-image: url("../../icons/stack.svg#enegry");
+  background-size: 42px 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item--three::before {
+  background-image: url("../../icons/stack.svg#eco");
+  background-size: 46px 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

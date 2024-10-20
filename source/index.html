@@ -20,37 +20,35 @@
   </head>
 
   <body class="page__body">
-    <header class="page-header">
-    <nav class="page-header__nav main-nav">
+    <header class="page-header" data-test="header">
+    <nav class="page-header__nav nav nav-list--closed nav--nojs">
       <a class ="page-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1300px)" type="image/svg+xml" width="170" height="36" srcset="">
-          <source media="(min-width: 768px)" type="image/svg+xml" width="82" height="36" srcset="">
-          <img class="logo" src="" width="32" height="36" alt="Логотип интернет-магазина Drink2Go">
+          <source media="(min-width: 1300px)" type="image/svg+xml" width="170" height="36" srcset="images/logo/logo-desktop.svg">
+          <source media="(min-width: 768px)" type="image/svg+xml" width="82" height="36" srcset="images/logo/logo-tablet.svg">
+          <img class="logo" src="images/logo/logo-mobile.svg" width="32" height="36" alt="Логотип интернет-магазина Drink2Go">
         </picture>
       </a>
 
-      <ul class="nav__list user-nav">
+      <ul class="nav-list user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
-            <svg></svg>
             <span class="user-nav__link-text">Войти</span>
           </a>
         </li>
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
-            <svg></svg>
             <span class="user-nav__link-text">Корзина</span>
           </a>
         </li>
         <li class="user-nav__item">
-          <button class="user-nav__toggle" type="button">
+          <button class="user-nav__toggle user-nav__toggle--open js-toggle-button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </li>
       </ul>
 
-      <div class="nav__list-wrapper">
+      <div class="nav-list__wrapper nav-list--dropdown nav-list-opened">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link nav__link-current">Главная</a>
@@ -69,36 +67,37 @@
     </nav>
   </header>
 
-    <main>
+    <main class="main-page">
       <h1 сlass="visually-hidden">Интернет-магазин по продаже кофейных напитков Drink2Go</h1>
 
-      <section class="slider"></section>
+    <section class="slider" data-test="hero">
+    </section>
 
-      <section class="features">
+      <section class="features" data-test="features">
         <p class="features__badge section__badge">Преимущества</p>
         <h2 class="features__heading section__heading">Главные причины выбрать Drink2Go</h2>
-          <ul class="features__list">
-            <li class="features__item feature">
+          <ol class="features__list">
+            <li class="features__item features__item--one feature">
               <h3 class="feature__title">Скорость</h3>
               <p class="feature__text">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
-            <li class="features__item feature">
+            <li class="features__item features__item--two feature">
               <h3 class="feature__title">Удобство</h3>
               <p class="feature__text">Легко помещается и в карман, и в маленькую сумочку</p>
             </li>
-            <li class="features__item feature">
+            <li class="features__item features__item--three feature">
               <h3 class="feature__title">Бодрость</h3>
               <p class="feature__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
-            <li class="features__item feature">
+            <li class="features__item features__item--four feature">
               <h3 class="feature__title">Экологичность</h3>
               <p class="feature__text">Вся упаковка сделана из перерабатываемых материалов</p>
             </li>
-          </ul>
+          </ol>
         </h2>
       </section>
 
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <p class="features__badge section__badge">Каталог</p>
         <h2 class="features__heading section__heading">Каталог кофейных напитков</h2>
 
@@ -318,7 +317,7 @@
             <li class="pagination__item">
               <a class="pagination__link" href="#">
                 <svg></svg>
-                <span class="pagination__text">Назад</span>
+                <span class="pagination__text">Предудыщая страница</span>
               </a>
             </li>
             <li class="pagination__item">
@@ -333,17 +332,19 @@
             <li class="pagination__item">
               <a class="pagination__link" href="#">
                 <svg></svg>
-                <span class="pagination__text">Вперед</span>
+                <span class="pagination__text">Следующая страница</span>
               </a>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="map"></section>
-    </main>
+  <section class="map" data-test="map">
+  </section>
 
-    <footer class="page-footer">
+</main>
+
+    <footer class="page-footer" data-test="footer">
       <nav clas="page-footer__nav">
 
         <div class="page-footer__socials">
