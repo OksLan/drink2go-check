@@ -1,0 +1,32 @@
+.slider {
+    width: 100%;
+    min-width: $mobile-width-only;
+}
+
+.slider__card {
+    min-height: 656px;
+    padding: 20px 20px 60px;
+}
+
+.slider__heading {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.slider__desc {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.slider__card--one {
+    background-color: $flat-white;
+}
+
+.slider__card--two {
+    background-color: $lavender-latte;
+}
+
+.slider__card--three {
+    background-color: $espresso;
+}
