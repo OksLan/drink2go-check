@@ -1,0 +1,13 @@
+.button {
+    display: block;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    color: $base-white;
+    background-color: $base-primary;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}

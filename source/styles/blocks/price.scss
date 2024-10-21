@@ -1,0 +1,15 @@
+.price {
+    line-height: 32px;
+}
+
+.price--old {
+    font-size: 16px;
+    color: $base-primary;
+    text-decoration-line: line-through;
+}
+
+.price--new {
+    font-size: 20px;
+    font-weight: 600;
+    color: $base-black;
+}

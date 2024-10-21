@@ -14,9 +14,21 @@
     text-align: center;
 }
 
+.slider__text-container {
+    text-align: center;
+}
+
 .slider__desc {
     font-size: 14px;
     line-height: 20px;
+    text-align: center;
+}
+
+.slider__buy-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider__card--one {
