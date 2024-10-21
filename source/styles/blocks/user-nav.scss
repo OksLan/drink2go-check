@@ -31,17 +31,3 @@
   padding: 0;
   display: none;
 }
-
-.user-nav__toggle--open .user-nav__toggle {
-  @media (max-width: $mobile-width-only) {
-    background-image: url("../../icons/stack.svg#burger");
-    display: block;
-  }
-}
-
-.ser-nav__toggle--close .user-nav__toggle {
-  @media (max-width: $mobile-width-only) {
-    background-image: url("../../icons/stack.svg#cross");
-    display: block;
-  }
-}

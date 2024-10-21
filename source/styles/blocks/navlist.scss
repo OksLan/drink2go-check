@@ -1,4 +1,4 @@
-.nav-list__wrapper {
+.navlist {
   @media (max-width: 767px) {
   width:100%;
   position: relative;
@@ -6,7 +6,7 @@
   }
 }
 
-.nav-list--dropdown {
+.navlist--dropdown {
   @media (max-width: 767px) {
     position: absolute;
     width: 100%;
@@ -16,14 +16,8 @@
   }
 }
 
-.nav-list--opened {
+.navlist--opened {
   @media (max-width: 767px) {
     display: block;
-  }
-}
-
-.nav-list--closed .nav__item {
-  @media (max-width: $mobile-width-only) {
-    display: none;
   }
 }

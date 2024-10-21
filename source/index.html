@@ -21,7 +21,7 @@
 
   <body class="page__body">
     <header class="page-header" data-test="header">
-    <nav class="page-header__nav nav nav-list--closed nav--nojs">
+    <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
       <a class ="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1300px)" type="image/svg+xml" width="170" height="36" srcset="images/logo/logo-desktop.svg">
@@ -48,19 +48,19 @@
         </li>
       </ul>
 
-      <div class="nav-list__wrapper nav-list--dropdown nav-list-opened">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link nav__link-current">Главная</a>
+      <div class="navlist navlist--dropdown navlist--opened">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link nav-list__link--current" href="index.html">Главная</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link">Каталог</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Каталог</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link">Доставка</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Доставка</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link">О нас</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">О нас</a>
           </li>
         </ul>
       </div>
@@ -85,8 +85,8 @@
             </picture>
           </div>
           <div class="slider__text-container">
-            <span class="slider__badge section__badge">Новинка!</span>
-            <h2 class="slider__heading section__heading">Декаф Флэт Уайт</h2>
+            <span class="slider__badge badge">Новинка!</span>
+            <h2 class="slider__heading heading">Декаф Флэт Уайт</h2>
             <p class="slider__desc">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
             <div class="slider__buy-wrapper">
               <div class="slider__price-container">
@@ -111,8 +111,8 @@
               </picture>
           </div>
           <div class="slider__text-container">
-            <span class="slider__badge section__badge">Новинка!</span>
-            <h2 class="slider__heading section__heading">Лавандовый Латте</h2>
+            <span class="slider__badge badge">Новинка!</span>
+            <h2 class="slider__heading heading">Лавандовый Латте</h2>
             <p class="slider__desc">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
             <div class="slider__buy-wrapper">
               <div class="slider__price-container">
@@ -137,8 +137,8 @@
               </picture>
           </div>
           <div class="slider__text-container">
-            <span class="slider__badge section__badge">Новинка!</span>
-            <h2 class="slider__heading section__heading">Тройной Эспрессо</h2>
+            <span class="slider__badge badge">Новинка!</span>
+            <h2 class="slider__heading heading">Тройной Эспрессо</h2>
             <p class="slider__desc">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
             <div class="slider__buy-wrapper">
               <div class="slider__price-container">
@@ -153,8 +153,8 @@
     </section>
 
       <section class="features" data-test="features">
-        <p class="features__badge section__badge">Преимущества</p>
-        <h2 class="features__heading section__heading">Главные причины выбрать Drink2Go</h2>
+        <p class="features__badge badge">Преимущества</p>
+        <h2 class="features__heading heading">Главные причины выбрать Drink2Go</h2>
           <ol class="features__list">
             <li class="features__item features__item--one feature">
               <h3 class="feature__title">Скорость</h3>
@@ -173,12 +173,11 @@
               <p class="feature__text">Вся упаковка сделана из перерабатываемых материалов</p>
             </li>
           </ol>
-        </h2>
       </section>
 
       <section class="catalog" data-test="catalog">
-        <p class="features__badge section__badge">Каталог</p>
-        <h2 class="features__heading section__heading">Каталог кофейных напитков</h2>
+        <p class="catalog__badge badge">Каталог</p>
+        <h2 class="catalog__heading heading">Каталог кофейных напитков</h2>
 
         <div class="catalog__filter">
           <form class="catalog__filter filter">
@@ -203,33 +202,32 @@
                 <label for="high-price" class="price-label price-label-to">до</label>
                 <input class="high-price-input price-input price-field" name="price-input" id="high-price" placeholder="900">
               </div>
-            </fieldset>
 
             <fieldset class="filter__group">
               <legend class="filter__title">Наличие молока</legend>
               <ul class="filter__list filter__list--radio">
                 <li class="filter__item">
                   <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="not-important" checked>
-                  <label class="filter__label" for="not-important">
-                    <span class="filer__text">Неважно</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Неважно</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="animal">
-                  <label class="filter__label" for="animal">
-                    <span class="filer__text">Только животное</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Только животное</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="vegetable">
-                  <label class="filter__label" for="vegetable">
-                    <span class="filer__text">Только растительное</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Только растительное</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="no-milk" disabled>
-                  <label class="filter__label" for="no-milk">
-                    <span class="filer__text">Без молока</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Без молока</span>
                   </label>
                 </li>
               </ul>
@@ -240,32 +238,32 @@
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="brazil" checked>
-                  <label class="filter__label" for="brazil">
-                    <span class="filer__text">Бразилия</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Бразилия</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="ethiopia">
-                  <label class="filter__label" for="ethiopia">
-                    <span class="filer__text">Эфиопия</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Эфиопия</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="columbia">
-                  <label class="filter__label" for="columbia">
-                    <span class="filer__text">Колумбия</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Колумбия</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="costa-rica">
-                  <label class="filter__label" for="costa-rica">
-                    <span class="filer__text">Коста-Рика</span>
+                  <label class="filter__label">
+                    <span class="filter__text">Коста-Рика</span>
                   </label>
                 </li>
                   <li class="filter__item">
                     <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="peru" disabled>
-                    <label class="filter__label" for="peru">
-                      <span class="filer__text">Перу</span>
+                    <label class="filter__label">
+                      <span class="filter__text">Перу</span>
                     </label>
                 </li>
               </ul>
@@ -289,7 +287,7 @@
         <div class="catalog__list">
 
           <article class="catalog__card card">
-            <a class="card__link--img" href="#">
+            <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
                 <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
@@ -297,10 +295,10 @@
 
                 <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/white-1@1x.png 1x, images/products/white-1@2x.png 2x">
                 <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/white-1@1x.png 1x, images/products/white-1@2x.png 2x">
-                <img class="slider__image" src="images/products/white-1@1x.png" srcset="images/products/white-1@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                <img class="card__image" src="images/products/white-1@1x.png" srcset="images/products/white-1@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <a class="card__link--title" href="#">
+            <a class="card__link-title" href="#">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
             </a>
             <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -316,7 +314,7 @@
           </article>
 
           <article class="catalog__card card">
-            <a class="card__link--img" href="#">
+            <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
                 <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
@@ -324,10 +322,10 @@
 
                 <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/violet-2@1x.png 1x, images/products/violet-2@2x.png 2x">
                 <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/violet-2@1x.png 1x, images/products/violet-2@2x.png 2x">
-                <img class="slider__image" src="images/products/violet-2@1x.png" srcset="images/products/violet-2@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                <img class="card__image" src="images/products/violet-2@1x.png" srcset="images/products/violet-2@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <a class="card__link--title" href="#">
+            <a class="card__link-title" href="#">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
             </a>
             <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -343,7 +341,7 @@
           </article>
 
           <article class="catalog__card card">
-            <a class="card__link--img" href="#">
+            <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
                 <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
@@ -351,10 +349,10 @@
 
                 <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/black-3@1x.png 1x, images/products/black-3@2x.png 2x">
                 <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/black-3@1x.png 1x, images/products/black-3@2x.png 2x">
-                <img class="slider__image" src="images/products/black-3@1x.png" srcset="images/products/black-3@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                <img class="card__image" src="images/products/black-3@1x.png" srcset="images/products/black-3@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <a class="card__link--title" href="#">
+            <a class="card__link-title" href="#">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
             </a>
             <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -370,7 +368,7 @@
           </article>
 
           <article class="catalog__card card">
-            <a class="card__link--img" href="#">
+            <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
                 <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
@@ -378,10 +376,10 @@
 
                 <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/red-4@1x.png 1x, images/products/red-4@2x.png 2x">
                 <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/red-4@1x.png 1x, images/products/red-4@2x.png 2x">
-                <img class="slider__image" src="images/products/red-4@1x.png" srcset="images/products/red-4@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                <img class="card__image" src="images/products/red-4@1x.png" srcset="images/products/red-4@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <a class="card__link--title" href="#">
+            <a class="card__link-title" href="#">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
             </a>
             <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -397,7 +395,7 @@
           </article>
 
           <article class="catalog__card card">
-            <a class="card__link--img" href="#">
+            <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
                 <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
@@ -405,10 +403,10 @@
 
                 <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/brown-5@1x.png 1x, images/products/brown-5@2x.png 2x">
                 <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/brown-5@1x.png 1x, images/products/brown-5@2x.png 2x">
-                <img class="slider__image" src="images/products/brown-5@1x.png" srcset="images/products/brown-5@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                <img class="card__image" src="images/products/brown-5@1x.png" srcset="images/products/brown-5@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <a class="card__link--title" href="#">
+            <a class="card__link-title" href="#">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
             </a>
             <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -424,7 +422,7 @@
           </article>
 
           <article class="catalog__card card">
-            <a class="card__link--img" href="#">
+            <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
                 <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
@@ -432,10 +430,10 @@
 
                 <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/yellow-6@1x.png 1x, images/products/yellow-6@2x.png 2x">
                 <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/yellow-6@1x.png 1x, images/products/yellow-6@2x.png 2x">
-                <img class="slider__image" src="images/products/yellow-6@1x.png" srcset="images/products/yellow-6@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                <img class="card__image" src="images/products/yellow-6@1x.png" srcset="images/products/yellow-6@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <a class="card__link--title" href="#">
+            <a class="card__link-title" href="#">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
             </a>
             <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -456,7 +454,7 @@
             <li class="pagination__item">
               <a class="pagination__link" href="#">
                 <svg></svg>
-                <span class="pagination__text">Предудыщая страница</span>
+                <span class="pagination__text">Предыдущая страница</span>
               </a>
             </li>
             <li class="pagination__item">
@@ -479,24 +477,25 @@
       </section>
 
   <section class="map" data-test="map">
+    <h2 class="map__heading heading visually-hidden">Как нас найти</h2>
   </section>
 
 </main>
 
     <footer class="page-footer" data-test="footer">
-      <nav clas="page-footer__nav">
+      <nav class="page-footer__nav">
 
         <div class="page-footer__socials">
           <a class="page-footer__logo"></a>
-          <ul class="social__list">
-            <li class="social_item">
-              <a class="social__link"></a>
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a class="social-list__link"></a>
             </li>
-            <li class="social_item">
-              <a class="social__link"></a>
+            <li class="social-list__item">
+              <a class="social-list__link"></a>
             </li>
-            <li class="social_item">
-              <a class="social__link"></a>
+            <li class="social-list__item">
+              <a class="social-list__link"></a>
             </li>
           </ul>
         </div>

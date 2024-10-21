@@ -1,0 +1,19 @@
+.main-nav--closed .user-nav__toggle {
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../../icons/stack.svg#burger");
+    display: block;
+  }
+}
+
+.main-nav--closed .nav__item {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--opened .user-nav__toggle {
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../../icons/stack.svg#cross");
+    display: block;
+  }
+}
