@@ -1,11 +1,9 @@
 .page-header {
   display: flex;
-  position: relative;
   min-width: 320px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
 }
 
 .page-header__nav {
@@ -16,13 +14,13 @@
 }
 
 .page-header__logo {
-  padding: 12px;
-  margin-right: 8px;
-  margin-left: 8px;
+  padding: 12px 20px;
   justify-content: center;
 }
 
 .page-header__logo-pic {
-  width: 32px;
-  height: 36px;
+  @media (width= 320px) {
+    width: 32px;
+    height: 36px;
+  }
 }
