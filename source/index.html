@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Интернет-магазин по продаже кофейных напитков Drink2Go</title>
+
+    <link rel="preload" href="images/logo/logo-mobile.svg">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" defer="defer"></script>
   </head>
 
   <body class="page__body">
     <header class="page-header" data-test="header">
-    <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
-      <a class ="page-header__logo" href="index.html">
+    <nav class="page-header__nav menu">
+      <a class ="page-header__logo" href="#">
         <picture>
-          <source media="(min-width: 1300px)" type="image/svg+xml" width="170" height="36" srcset="images/logo/logo-desktop.svg">
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="170" height="36" srcset="images/logo/logo-desktop.svg">
           <source media="(min-width: 768px)" type="image/svg+xml" width="82" height="36" srcset="images/logo/logo-tablet.svg">
-          <img class="logo" src="images/logo/logo-mobile.svg" width="32" height="36" alt="Логотип интернет-магазина Drink2Go">
+          <img class="page-header__logo-pic" src="images/logo/logo-mobile.svg" width="32" height="36" alt="Логотип интернет-магазина Drink2Go">
         </picture>
       </a>
 
@@ -143,7 +146,7 @@
               </div>
             </div>
           </div> -->
-        
+
         </div>
       </section>
 
