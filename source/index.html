@@ -7,7 +7,7 @@
     <title>Интернет-магазин по продаже кофейных напитков Drink2Go</title>
 
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
@@ -26,37 +26,46 @@
         </picture>
       </a>
 
-      <ul class="nav-list user-nav">
+      <ul class="nav__list-user user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
+            <svg class="user-nav__icon user-nav__icon--account" width="16" height="16">
+              <use href="icons/stack.svg#account""></use>
+            </svg>
             <span class="user-nav__link-text">Войти</span>
           </a>
         </li>
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
+            <svg class="user-nav__icon user-nav__icon--basket" width="16" height="16">
+              <use href="icons/stack.svg#basket"></use>
+            </svg>
             <span class="user-nav__link-text">Корзина</span>
           </a>
         </li>
         <li class="user-nav__item">
-          <button class="user-nav__toggle user-nav__toggle--open js-toggle-button" type="button">
+          <button class="user-nav__toggle user-nav__toggle--open" type="button">
             <span class="visually-hidden">Открыть меню</span>
-          </button>
+            <svg class="user-nav__icon" width="16" height="16">
+              <use href="icons/stack.svg#burger"></use>
+            </svg>
+            </button>
         </li>
       </ul>
 
-      <div class="navlist navlist--dropdown navlist--opened">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--current" href="index.html">Главная</a>
+      <div class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current">Главная</a>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Каталог</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link">Каталог</a>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Доставка</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link">Доставка</a>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">О нас</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link">О нас</a>
           </li>
         </ul>
       </div>

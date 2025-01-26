@@ -12,22 +12,43 @@
 }
 
 .user-nav__link {
-  width: 60ps;
+  width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  color: $base-black;
+  outline: 0;
+}
+
+.user-nav__link-text {
+  display: none;
+}
+
+.user-nav__icon--account {
+  width: 16px;
+  height: auto;
 }
 
 .user-nav__toggle {
-  background-color: $base-white;
-  color: $base-black;
-  width: 16px;
-  height: 12px;
+  width: 60px;
+  height: 60px;
   position: relative;
   border: none;
   margin-left: auto;
   padding: 0;
   display: none;
+  cursor: pointer;
+  background-color: $base-white;
+}
+
+.user-nav__toggle--open {
+  background-image: url("/source/icons/burger.svg");
+  display: block;
+}
+
+.user-nav__toggle--close {
+  background-image: url("/source/icons/cross.svg");
+  display: block;
 }
