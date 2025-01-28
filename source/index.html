@@ -75,35 +75,37 @@
     <main class="main-page">
       <h1 class="visually-hidden">Интернет-магазин по продаже кофейных напитков Drink2Go</h1>
 
-      <section class="promo slider" data-test="hero">
-        <div class="slider-wrapper">
-          <div class="slider__card slider__card--one">
-            <div class="slider__img-container">
-              <picture>
-              <source media="(min-width: 1300px)" width="600" height="600" type="image/webp" srcset="images/products/flat_white-desktop@1x.webp 1x, images/products/flat_white-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="476" height="476" type="image/webp" srcset="images/products/flat_white-tablet@1x.webp 1x, images/products/flat_white-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="images/products/flat_white-mobile@1x.webp 1x, images/products/flat_white-mobile@2x.webp 2x">
+      <section class="slider hero" data-test="hero">
+        <div class="section-wrapper slider-wrapper">
+          <div class="slider-button-prev arrow"></div>
+            <div class="section-wrapper slider-list">
+            <div class="slider-list__item slider-list__item--one slider-list__item--active">
+              <div class="slider__img-container">
+                <picture>
+                  <source media="(min-width: 1300px)" width="600" height="600" type="image/webp" srcset="images/products/flat_white-desktop@1x.webp 1x, images/products/flat_white-desktop@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="476" height="476" type="image/webp" srcset="images/products/flat_white-tablet@1x.webp 1x, images/products/flat_white-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/flat_white-mobile@1x.webp 1x, images/products/flat_white-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1300px)" type="image/png" width="600" height="600" srcset="images/products/flat_white-desktop@1x.png 1x, images/products/flat_white-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" type="image/png" width="476" height="476" srcset="images/products/flat_white-tablet@1x.png 1x, images/products/flat_white-tablet@2x.png 2x">
-              <img class="slider__image" src="images/products/flat_white-mobile@1x.png" srcset="images/products/flat_white-mobile@2x.png 2x" width="280" height="280" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </div>
-            <div class="slider__text-container">
-              <span class="slider__badge badge">Новинка!</span>
-              <h2 class="slider__heading heading">Декаф Флэт Уайт</h2>
-              <p class="slider__desc">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              <div class="slider__buy-wrapper">
-                <div class="slider__price-container">
-                  <span class="price price--old">295₽</span>
-                  <span class="price price--new">225₽</span>
-                </div>
-                <button class="slider__button button" type="button">Заказать</button>
+                  <source media="(min-width: 1300px)" type="image/png" width="600" height="600" srcset="images/products/flat_white-desktop@1x.png 1x, images/products/flat_white-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="476" height="476" srcset="images/products/flat_white-tablet@1x.png 1x, images/products/flat_white-tablet@2x.png 2x">
+                  <img class="slider__image" src="images/products/flat_white-mobile@1x.png" srcset="images/products/flat_white-mobile@2x.png 2x" width="280" height="280" alt="Кофе Декаф Флэт Уайт">
+                </picture>
               </div>
-            </div>
-          </div>
+              <div class="slider__text-container">
+                <span class="slider__badge badge">Новинка!</span>
+                <h2 class="slider__heading">Декаф Флэт Уайт</h2>
+                <p class="slider__desc">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                <div class="slider__buy-wrapper">
+                  <div class="slider__price-container">
+                    <span class="price price--old">295₽</span>
+                    <span class="price price--new">225₽</span>
+                  </div>
+                  <button class="slider__button button" type="button">Заказать</button>
+                </div>
 
-          <!-- <div class="slider__card slider__card--two">
+            </div>
+
+            <!-- <div class="slider__card slider__card--two">
             <div class="slider__img-container">
               <picture>
                 <source media="(min-width: 1300px)" width="600" height="600" type="image/webp" srcset="images/products/lavender-desktop@1x.webp 1x, images/products/lavender-desktop@2x.webp 2x">
@@ -129,7 +131,7 @@
             </div>
           </div> -->
 
-          <!-- <div class="slider__card slider__card--three">
+            <!-- <div class="slider__card slider__card--three">
             <div class="slider__img-container">
               <picture>
                 <source media="(min-width: 1300px)" width="600" height="600" type="image/webp" srcset="images/products/espresso-desktop@1x.webp 1x, images/products/espresso-desktop@2x.webp 2x">
@@ -154,7 +156,8 @@
               </div>
             </div>
           </div> -->
-
+          </div>
+          <div class="slider-button-next arrow"></div>
         </div>
       </section>
 
