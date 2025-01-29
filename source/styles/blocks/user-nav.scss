@@ -80,9 +80,9 @@
   background-image: url("/source/icons/burger.svg");
   display: block;
   
-  @media screen and (width >= 768px) {
-    display: none;
-  }
+    @media screen and (width >= 768px) {
+      display: none;
+    }
 }
 
 .user-nav__toggle--close {
