@@ -4,6 +4,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: $base-white;
+  color: $base-black;
 }
 
 * {
@@ -45,6 +47,7 @@ img {
 
 a {
   text-decoration: none;
+  color: $base-black;
 }
 
 .visually-hidden {

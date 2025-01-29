@@ -2,6 +2,17 @@
   width: 100%;
   position: relative;
   display: none;
+
+  @media screen and (width >= 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: min-content;
+    flex-grow: 1;
+  }
+
+  @media screen and (width >= 1440px) {
+    flex: 1;
+  }
 }
 
 .main-nav--opened {
@@ -15,12 +26,31 @@
   position: absolute;
   z-index: 10;
   background-color: $base-white;
-}
 
+  @media screen and (width >= 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (width >= 1440px) {
+    margin-left: 25px;
+  }
+}
 
 .main-nav__item {
   list-style: none;
   border-top: 1px solid $base-secondary;
+
+  @media screen and (width >= 768px) {
+    border-top: none;
+  }
+
+  @media screen and (width >= 1440px) {
+    margin-right: 19px;
+    min-width: 90px;
+  }
 }
 
 .main-nav__link {
@@ -36,11 +66,26 @@
   line-height: 16px;
   font-weight: 500;
   padding: 10px 20px;
-  box-sizing: border-box;
-  outline: 0;
+  letter-spacing: .02em;
+
+  @media screen and (width >= 768px) {
+    min-height: 80px;
+  }
 }
 
 .main-nav__link--current {
   color: $base-primary;
   position: relative;
+}
+
+.main-nav__link--current::before {
+  @media screen and (width >= 768px) {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: $base-primary;
+  }
 }

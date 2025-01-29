@@ -4,6 +4,14 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (width >= 768px) {
+    padding: 0 20px;
+  }
+
+  @media screen and (width >= 1440px) {
+    padding: 0 40px;
+  }
 }
 
 .page-header__nav {
@@ -14,7 +22,14 @@
 }
 
 .page-header__logo {
+  display: flex;
   padding: 12px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (width >= 768px) {
+    padding: 22px 0;
+  }
 }
 
 .page-header__logo-pic {
@@ -30,3 +45,15 @@
     }
 }
 
+.page-header__logo-text {
+  display: none;
+
+  @media screen and (width >= 1440px) {
+    display: block;
+    margin-left: 20px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 16px;
+    box-sizing: border-box;
+  }
+}

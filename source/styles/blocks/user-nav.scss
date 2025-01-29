@@ -5,10 +5,20 @@
   align-items: center;
   margin: 0;
   padding: 0;
+
+  @media screen and (width >= 768px) {
+    order: 1;
+  }
 }
 
 .user-nav__item {
   list-style: none;
+}
+
+.user-nav__item:first-child {
+  @media screen and (width >= 1440px) {
+    margin-left: 6px;
+  }
 }
 
 .user-nav__link {
@@ -20,10 +30,33 @@
   text-decoration: none;
   color: $base-black;
   outline: 0;
+  padding: 10px 20px;
+
+  @media screen and (width >= 768px) {
+    min-height: 80px;
+    display: flex;
+  }
+
+  @media screen and (width >= 1440px) {
+    width: min-content;
+    min-width: 133px;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .user-nav__link-text {
   display: none;
+
+  @media screen and (width >= 1440px) {
+    display: block;
+    margin-left: 8px;
+  }
 }
 
 .user-nav__icon--account {
@@ -46,6 +79,10 @@
 .user-nav__toggle--open {
   background-image: url("/source/icons/burger.svg");
   display: block;
+  
+  @media screen and (width >= 768px) {
+    display: none;
+  }
 }
 
 .user-nav__toggle--close {
