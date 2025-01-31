@@ -15,31 +15,18 @@ body {
 }
 
 .wrap {
-  width: 280px;
+  max-width: 280px;
   margin: 0 auto;
   padding: 1px 0;
 
   @media screen and (width >= 768px) {
-    width: 728px;
+    max-width: 728px;
   }
 
   @media screen and (width >= 1440px) {
-    width: 1360px;
+    max-width: 1360px;
   }
 }
-
-// .section-wrapper {
-//   max-width: 280px;
-//   margin: 0 auto;
-
-//   @media screen and (width >= 768px) {
-//     max-width: 728px;
-//   }
-
-//   @media screen and (width >= 1440px) {
-//     max-width: 1360px;
-//   }
-// }
 
 img {
   display: block;
