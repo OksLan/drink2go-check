@@ -76,6 +76,9 @@
 
 .slider__text-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
 
   @media screen and (width >= 768px){
     padding: 60px 68px;
