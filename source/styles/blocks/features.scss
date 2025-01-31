@@ -7,7 +7,7 @@
     padding: 50px 30px 60px;
   }
 
-  @media screen and (width >= 768px) {
+  @media screen and (width >= 1140px) {
     padding: 100px 40px 120px;
   }
 }
@@ -61,7 +61,6 @@
 }
 
 .feature__image {
-  margin-bottom: 10px;
 
   @media screen and (width >= 768px) {
     grid-row: 1 / 3;
