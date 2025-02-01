@@ -1,5 +1,6 @@
 /* в этот файл добавляет скрипты*/
 
+/* развернуть/свернуть main-nav*/
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.user-nav__toggle');
   const navList = document.querySelector('.main-nav');
@@ -15,3 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
     icon.setAttribute('href', isOpen ? 'icons/stack.svg#cross' : 'icons/stack.svg#burger');
   });
 });
+
+/* slider */
