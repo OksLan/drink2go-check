@@ -1,5 +1,3 @@
-/* в этот файл добавляет скрипты*/
-
 /* развернуть/свернуть main-nav*/
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.user-nav__toggle');
@@ -18,3 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* slider */
+
+

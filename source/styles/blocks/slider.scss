@@ -25,7 +25,6 @@
 }
 
 .slide {
-    // min-height: 656px;
     min-height: 100%;
     padding: 20px 20px 60px;
     min-width: 100%;
@@ -36,6 +35,7 @@
       flex-direction: column;
       min-height: 640px;
       padding: 0;
+      margin-bottom: 188px;
     }
 
     @media screen and (width >= 1440px){
@@ -51,7 +51,7 @@
   @media screen and (width >= 768px){
     position: absolute;
     align-self: center;
-    bottom: 0;
+    bottom: -188px;
     margin: 0;
   }
 
@@ -157,10 +157,19 @@
     background-color: $espresso;
 }
 
-.slider .arrow {
-  color: $base-primary;
+/* стрелки */
+
+.slider-button-prev,
+.slider-button-next {
   position: absolute;
-  top: 49%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: $base-primary;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .slider-button-prev::after {
@@ -170,7 +179,7 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  left: -18px;
+  left: 0;
 }
 
 .slider-button-next::after {
@@ -180,7 +189,7 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  right: -303px;
+  right: 0;
 }
 
 .slider-pagination {
@@ -206,4 +215,27 @@
 
 .slider-pagination-bullet--active {
   background-color: $base-primary;
+}
+
+
+
+/* Кнопка "Назад" */
+.slider-button-prev {
+  left: 0; // Прижимаем вплотную к краю по умолчанию
+}
+
+/* Кнопка "Вперед" */
+.slider-button-next {
+  right: 0; // Прижимаем вплотную к краю по умолчанию
+}
+
+/* Отступы для экранов 768px и больше */
+@media (min-width: 768px) {
+  .slider-button-prev {
+    left: 30px;
+  }
+
+  .slider-button-next {
+    right: 30px;
+  }
 }
