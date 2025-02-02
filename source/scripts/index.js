@@ -16,5 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* slider */
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderWrapper = document.querySelector('.slides-wrapper');
+  const slide = document.querySelectorAll('.slide');
+  const prevButton = document.querySelector('.slider-button-prev');
+  const nextButton = document.querySelector('.slider-button-next');
+  let slideIndex = 0;
 
+    const updateSlides = () => {
+    slide.forEach((slide, index) => {
+    slide.style.transform = `translateX(${(index - slideIndex) * 100}%)`;
+  });
+
+    prevButton.disabled = (slideIndex === 0);
+    nextButton.disabled = (slideIndex === slide.length - 1);
+  };
+
+  prevButton.addEventListener('click', () => {
+    if (slideIndex > 0) {
+      slideIndex--;
+      updateSlides();
+    }
+  });
+
+  nextButton.addEventListener('click', () => {
+    if (slideIndex < slide.length - 1) {
+      slideIndex++;
+      updateSlides();
+    }
+  });
+
+  updateSlides();
+});
 
