@@ -17,6 +17,7 @@
 .slides-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
+}
 
 .slide {
     min-height: 100%;
@@ -152,7 +153,6 @@
 }
 
 /* стрелки */
-
 .slider-button-prev,
 .slider-button-next {
   position: absolute;
@@ -166,6 +166,14 @@
   z-index: 10;
 }
 
+.slider-button-prev {
+  left: 0;
+
+  @media (min-width: 768px) {
+    left: 30px;
+  }
+}
+
 .slider-button-prev::after {
   content: "";
   background-image: url("../../icons/prev.svg");
@@ -173,7 +181,14 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  left: 0;
+}
+
+.slider-button-next {
+  right: 0;
+
+  @media (min-width: 768px) {
+    right: 30px;
+  }
 }
 
 .slider-button-next::after {
@@ -183,9 +198,9 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  right: 0;
 }
 
+/* пагинация */
 .slider-pagination {
   position: absolute;
   text-align: center;
@@ -209,27 +224,4 @@
 
 .slider-pagination-bullet--active {
   background-color: $base-primary;
-}
-
-
-
-/* Кнопка "Назад" */
-.slider-button-prev {
-  left: 0; // Прижимаем вплотную к краю по умолчанию
-}
-
-/* Кнопка "Вперед" */
-.slider-button-next {
-  right: 0; // Прижимаем вплотную к краю по умолчанию
-}
-
-/* Отступы для экранов 768px и больше */
-@media (min-width: 768px) {
-  .slider-button-prev {
-    left: 30px;
-  }
-
-  .slider-button-next {
-    right: 30px;
-  }
 }
