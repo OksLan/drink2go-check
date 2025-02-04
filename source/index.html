@@ -220,28 +220,38 @@
         <h2 class="catalog__heading heading">Каталог кофейных напитков</h2>
 
         <div class="catalog__filter">
-          <form class="catalog__filter filter">
 
-            <fieldset class="filter__group">
-              <legend class="filter__title">Цена</legend>
-                <div class="price-slider">
-                    <div class="price-bar" style="left: 0; width: 280px">
-                      <button class="slider-pin min-pin" type="button">
-                        <span class="visually-hidden">Минимальная цена</span>
+          <form class="catalog__form catalog__form--filter filter">
+
+            <fieldset class="filter__group filter__group--pricerange">
+              <legend class="filter__title filter__title--pricerange">Цена</legend>
+
+                <div class="filter__pricerange pricerange">
+                  <div class="pricerange__scale">
+                    <div class="pricerange__bar">
+                      <button class="pricerange__pin pricerange__pin--min" type="button">
+                        <span class="visually-hidden">Дешевле</span>
                       </button>
-                      <button class="slider-pin max-pin" type="button">
-                        <span class="visually-hidden">Максимальная цена</span>
+                      <button class="pricerange__pin pricerange__pin--max" type="button">
+                        <span class="visually-hidden">Дороже</span>
                       </button>
                     </div>
                   </div>
+                </div>
+
+                <div class="filter__input-boxes">
+                  <label class="filter__input-box filter__input-box--from">
+                    <input class="filter__input-value filter__input-value--min" type="text" name="min-value" placeholder="0">
+                  </label>
+                  
+                  <label class="filter__input-box filter__input-box--to">
+                    <input class="filter__input-value filter__input-value--max" type="text" name="max-value" placeholder="900">
+                  </label>
+                </div>               
+                
             </fieldset>
 
-              <div class="price-input-boxes">
-                <label for="low-price" class="price-label price-label-from">от</label>
-                <input class="low-price-input price-input price-field" name="price-input" id="low-price" placeholder="0">
-                <label for="high-price" class="price-label price-label-to">до</label>
-                <input class="high-price-input price-input price-field" name="price-input" id="high-price" placeholder="900">
-              </div>
+
 
             <fieldset class="filter__group">
               <legend class="filter__title">Наличие молока</legend>
@@ -313,7 +323,7 @@
             <button class="filter__button button" type="reset">Сбросить</button>
           </form>
 
-          <div class="catalog__filter sorting">
+          <div class="catalog__form catalog__form--sorting sorting">
             <span class="sorting__title">Сортировка:</span>
             <select class="sorting__list" name="sorting-list">
               <option value="low-price-option">по умолчанию</option>
@@ -322,171 +332,171 @@
               <option value="raiting-option">сначала популярные</option>
             </select>
           </div>
-        </div>
 
-        <div class="catalog__list">
+          <div class="catalog__list">
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
+  
+                  <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/white-1@1x.png 1x, images/products/white-1@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/white-1@1x.png 1x, images/products/white-1@2x.png 2x">
+                  <img class="card__image" src="images/products/white-1@1x.png" srcset="images/products/white-1@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                </picture>
+              </a>
+              <a class="card__link-title" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__container-price">
+                <span class="card__price">225₽</span>
+                <button class="card__button button button--card" type="button">
+                  <svg class="card__button-icon" width="20" height="16">
+                    <use href="icons/stack.svg#basket-plus"></use>
+                  </svg>
+                  <span class="card__button-text">В корзину</span>
+                </button>
+              </div>
+            </article>
+  
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
+  
+                  <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/violet-2@1x.png 1x, images/products/violet-2@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/violet-2@1x.png 1x, images/products/violet-2@2x.png 2x">
+                  <img class="card__image" src="images/products/violet-2@1x.png" srcset="images/products/violet-2@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                </picture>
+              </a>
+              <a class="card__link-title" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__container-price">
+                <span class="card__price">225₽</span>
+                <button class="card__button button button--card" type="button">
+                  <svg class="card__button-icon" width="20" height="16">
+                    <use href="icons/stack.svg#basket-plus"></use>
+                  </svg>
+                  <span class="card__button-text">В корзину</span>
+                </button>
+              </div>
+            </article>
+  
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
+  
+                  <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/black-3@1x.png 1x, images/products/black-3@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/black-3@1x.png 1x, images/products/black-3@2x.png 2x">
+                  <img class="card__image" src="images/products/black-3@1x.png" srcset="images/products/black-3@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                </picture>
+              </a>
+              <a class="card__link-title" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__container-price">
+                <span class="card__price">225₽</span>
+                <button class="card__button button button--card" type="button">
+                  <svg class="card__button-icon" width="20" height="16">
+                    <use href="icons/stack.svg#basket-plus"></use>
+                  </svg>
+                  <span class="card__button-text">В корзину</span>
+                </button>
+              </div>
+            </article>
+  
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
+  
+                  <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/red-4@1x.png 1x, images/products/red-4@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/red-4@1x.png 1x, images/products/red-4@2x.png 2x">
+                  <img class="card__image" src="images/products/red-4@1x.png" srcset="images/products/red-4@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                </picture>
+              </a>
+              <a class="card__link-title" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__container-price">
+                <span class="card__price">225₽</span>
+                <button class="card__button button button--card" type="button">
+                  <svg class="card__button-icon" width="20" height="16">
+                    <use href="icons/stack.svg#basket-plus"></use>
+                  </svg>
+                  <span class="card__button-text">В корзину</span>
+                </button>
+              </div>
+            </article>
+  
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
+  
+                  <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/brown-5@1x.png 1x, images/products/brown-5@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/brown-5@1x.png 1x, images/products/brown-5@2x.png 2x">
+                  <img class="card__image" src="images/products/brown-5@1x.png" srcset="images/products/brown-5@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                </picture>
+              </a>
+              <a class="card__link-title" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__container-price">
+                <span class="card__price">225₽</span>
+                <button class="card__button button button--card" type="button">
+                  <svg class="card__button-icon" width="20" height="16">
+                    <use href="icons/stack.svg#basket-plus"></use>
+                  </svg>
+                  <span class="card__button-text">В корзину</span>
+                </button>
+              </div>
+            </article>
+  
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
+                  <source type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
+  
+                  <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/yellow-6@1x.png 1x, images/products/yellow-6@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/yellow-6@1x.png 1x, images/products/yellow-6@2x.png 2x">
+                  <img class="card__image" src="images/products/yellow-6@1x.png" srcset="images/products/yellow-6@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
+                </picture>
+              </a>
+              <a class="card__link-title" href="#">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__container-price">
+                <span class="card__price">225₽</span>
+                <button class="card__button button button--card" type="button">
+                  <svg class="card__button-icon" width="20" height="16">
+                    <use href="icons/stack.svg#basket-plus"></use>
+                  </svg>
+                  <span class="card__button-text">В корзину</span>
+                </button>
+              </div>
+            </article>
+          </div>
 
-          <article class="catalog__card card">
-            <a class="card__link" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
-                <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
-                <source type="image/webp" srcset="images/products/white-1@1x.webp 1x, images/products/white-1@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/white-1@1x.png 1x, images/products/white-1@2x.png 2x">
-                <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/white-1@1x.png 1x, images/products/white-1@2x.png 2x">
-                <img class="card__image" src="images/products/white-1@1x.png" srcset="images/products/white-1@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </a>
-            <a class="card__link-title" href="#">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-            </a>
-            <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-            <div class="card__container-price">
-              <span class="card__price">225₽</span>
-              <button class="card__button button button--card" type="button">
-                <svg class="card__button-icon" width="20" height="16">
-                  <use href="icons/stack.svg#basket-plus"></use>
-                </svg>
-                <span class="card__button-text">В корзину</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="catalog__card card">
-            <a class="card__link" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
-                <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
-                <source type="image/webp" srcset="images/products/violet-2@1x.webp 1x, images/products/violet-2@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/violet-2@1x.png 1x, images/products/violet-2@2x.png 2x">
-                <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/violet-2@1x.png 1x, images/products/violet-2@2x.png 2x">
-                <img class="card__image" src="images/products/violet-2@1x.png" srcset="images/products/violet-2@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </a>
-            <a class="card__link-title" href="#">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-            </a>
-            <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-            <div class="card__container-price">
-              <span class="card__price">225₽</span>
-              <button class="card__button button button--card" type="button">
-                <svg class="card__button-icon" width="20" height="16">
-                  <use href="icons/stack.svg#basket-plus"></use>
-                </svg>
-                <span class="card__button-text">В корзину</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="catalog__card card">
-            <a class="card__link" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
-                <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
-                <source type="image/webp" srcset="images/products/black-3@1x.webp 1x, images/products/black-3@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/black-3@1x.png 1x, images/products/black-3@2x.png 2x">
-                <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/black-3@1x.png 1x, images/products/black-3@2x.png 2x">
-                <img class="card__image" src="images/products/black-3@1x.png" srcset="images/products/black-3@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </a>
-            <a class="card__link-title" href="#">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-            </a>
-            <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-            <div class="card__container-price">
-              <span class="card__price">225₽</span>
-              <button class="card__button button button--card" type="button">
-                <svg class="card__button-icon" width="20" height="16">
-                  <use href="icons/stack.svg#basket-plus"></use>
-                </svg>
-                <span class="card__button-text">В корзину</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="catalog__card card">
-            <a class="card__link" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
-                <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
-                <source type="image/webp" srcset="images/products/red-4@1x.webp 1x, images/products/red-4@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/red-4@1x.png 1x, images/products/red-4@2x.png 2x">
-                <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/red-4@1x.png 1x, images/products/red-4@2x.png 2x">
-                <img class="card__image" src="images/products/red-4@1x.png" srcset="images/products/red-4@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </a>
-            <a class="card__link-title" href="#">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-            </a>
-            <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-            <div class="card__container-price">
-              <span class="card__price">225₽</span>
-              <button class="card__button button button--card" type="button">
-                <svg class="card__button-icon" width="20" height="16">
-                  <use href="icons/stack.svg#basket-plus"></use>
-                </svg>
-                <span class="card__button-text">В корзину</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="catalog__card card">
-            <a class="card__link" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
-                <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
-                <source type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/brown-5@1x.png 1x, images/products/brown-5@2x.png 2x">
-                <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/brown-5@1x.png 1x, images/products/brown-5@2x.png 2x">
-                <img class="card__image" src="images/products/brown-5@1x.png" srcset="images/products/brown-5@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </a>
-            <a class="card__link-title" href="#">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-            </a>
-            <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-            <div class="card__container-price">
-              <span class="card__price">225₽</span>
-              <button class="card__button button button--card" type="button">
-                <svg class="card__button-icon" width="20" height="16">
-                  <use href="icons/stack.svg#basket-plus"></use>
-                </svg>
-                <span class="card__button-text">В корзину</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="catalog__card card">
-            <a class="card__link" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
-                <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
-                <source type="image/webp" srcset="images/products/yellow-6@1x.webp 1x, images/products/yellow-6@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" type="image/png" width="130" height="188" srcset="images/products/yellow-6@1x.png 1x, images/products/yellow-6@2x.png 2x">
-                <source media="(min-width: 768px)" type="image/png" width="130" height="188" srcset="images/products/yellow-6@1x.png 1x, images/products/yellow-6@2x.png 2x">
-                <img class="card__image" src="images/products/yellow-6@1x.png" srcset="images/products/yellow-6@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт">
-              </picture>
-            </a>
-            <a class="card__link-title" href="#">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-            </a>
-            <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-            <div class="card__container-price">
-              <span class="card__price">225₽</span>
-              <button class="card__button button button--card" type="button">
-                <svg class="card__button-icon" width="20" height="16">
-                  <use href="icons/stack.svg#basket-plus"></use>
-                </svg>
-                <span class="card__button-text">В корзину</span>
-              </button>
-            </div>
-          </article>
         </div>
 
         <div class="catalog__pagination pagination">

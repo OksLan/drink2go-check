@@ -1,3 +1,88 @@
 .catalog {
   background-color: $lightest-grey;
+  padding: 50px 20px 20px;
+  text-align: center;
+}
+
+.catalog__heading {
+  margin-bottom: 20px;
+}
+
+.catalog__form {
+  margin-bottom: 36px;
+}
+
+.filter__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter__title {
+  text-align: left;
+  padding: 0;
+}
+
+.filter__title--pricerange {
+  margin-bottom: 32px;
+}
+
+.filter__pricerange {
+  margin-bottom: 32px;
+}
+
+.pricerange__scale {
+  width: 100%;
+  background-color: $light-grey;
+  position: relative;
+  height: 2px;
+} 
+
+.pricerange__bar {
+  position: relative;
+  height: 4px;
+  width: 85%;
+  background-color: $primary-lighter;
+}
+
+.pricerange__pin--min {
+  left: 0;
+}
+
+.pricerange__pin--max {
+  left: 100%;
+}
+
+.filter__input-boxes {
+  display: flex;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.filter__input-box--from {
+  margin-right: 30px;
+}
+
+.filter__input-value {
+  width: 100%;
+  min-height: 40px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 5px 10px;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+}
+
+.filter__input-boxes::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: $base-grey;
+  top: 20px;
+  right: 135px;
 }
