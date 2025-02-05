@@ -251,35 +251,38 @@
                 
             </fieldset>
 
-
-
             <fieldset class="filter__group">
               <legend class="filter__title">Наличие молока</legend>
               <ul class="filter__list filter__list--radio">
+                
                 <li class="filter__item">
-                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="not-important" checked>
-                  <label class="filter__label">
+                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="milk-radio" value="not-important" checked>
+                  <label class="filter__label filter__text--radio" for="not-important">
                     <span class="filter__text">Неважно</span>
                   </label>
                 </li>
+                
                 <li class="filter__item">
-                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="animal">
-                  <label class="filter__label">
+                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="milk-radio" value="animal">
+                  <label class="filter__label filter__text--radio" for="animal">
                     <span class="filter__text">Только животное</span>
                   </label>
                 </li>
+                
                 <li class="filter__item">
-                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="vegetable">
-                  <label class="filter__label">
+                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="milk-radio" value="vegetable">
+                  <label class="filter__label filter__text--radio" for="vegetable">
                     <span class="filter__text">Только растительное</span>
                   </label>
                 </li>
+                
                 <li class="filter__item">
-                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="radio-milk" value="no-milk" disabled>
-                  <label class="filter__label">
+                  <input class="filter__box filter__box--radio visually-hidden" type="radio" name="milk-radio" value="no-milk" disabled>
+                  <label class="filter__label filter__text--radio" for="no-milk">
                     <span class="filter__text">Без молока</span>
                   </label>
                 </li>
+
               </ul>
             </fieldset>
 
@@ -287,33 +290,33 @@
               <legend class="filter__title">Страна произрастания</legend>
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
-                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="brazil" checked>
-                  <label class="filter__label">
-                    <span class="filter__text">Бразилия</span>
+                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="brazil" id="brazil" checked>
+                  <label class="filter__label filter__text--checkbox" for="brazil">
+                    <span class="filter__text filter__text-left">Бразилия</span>
                   </label>
                 </li>
                 <li class="filter__item">
-                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="ethiopia">
-                  <label class="filter__label">
-                    <span class="filter__text">Эфиопия</span>
+                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="ethiopia" id="ethiopia">
+                  <label class="filter__label filter__text--checkbox" for="ethiopia">
+                    <span class="filter__text filter__text-left">Эфиопия</span>
                   </label>
                 </li>
                 <li class="filter__item">
-                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="columbia">
-                  <label class="filter__label">
-                    <span class="filter__text">Колумбия</span>
+                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="columbia" id="columbia">
+                  <label class="filter__label filter__text--checkbox" for="columbia">
+                    <span class="filter__text filter__text-left">Колумбия</span>
                   </label>
                 </li>
                 <li class="filter__item">
-                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="costa-rica">
-                  <label class="filter__label">
-                    <span class="filter__text">Коста-Рика</span>
+                  <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="costa-rica" id="costa-rica">
+                  <label class="filter__label filter__text--checkbox" for="costa-rica">
+                    <span class="filter__text filter__text-left">Коста-Рика</span>
                   </label>
                 </li>
                   <li class="filter__item">
-                    <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="peru" disabled>
-                    <label class="filter__label">
-                      <span class="filter__text">Перу</span>
+                    <input class="filter__box filter__box--checkbox visually-hidden" type="checkbox" name="checkbox-country" value="peru" id="peru" disabled>
+                    <label class="filter__label filter__text--checkbox" for="peru">
+                      <span class="filter__text filter__text-left">Перу</span>
                     </label>
                 </li>
               </ul>
