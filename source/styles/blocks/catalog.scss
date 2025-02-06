@@ -39,7 +39,7 @@
   background-color: $light-grey;
   position: relative;
   height: 2px;
-} 
+}
 
 .pricerange__bar {
   position: relative;
@@ -329,4 +329,43 @@
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
+}
+
+.pagination__button-icon {
+  width: 6px;
+  height: auto;
+  fill: $base-primary;
+}
+
+.pagination__button-text {
+  display: none;
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.pagination__item {
+  list-style: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination__item:first-child {
+  margin-left: 20px;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  text-decoration: none;
+  background-color: $base-white;
 }

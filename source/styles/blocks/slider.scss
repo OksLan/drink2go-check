@@ -201,7 +201,7 @@
 }
 
 /* пагинация */
-.slider-pagination {
+.slider__pagination {
   position: absolute;
   text-align: center;
   z-index: 10;
@@ -216,12 +216,16 @@
   }
 }
 
-.slider-pagination-bullet {
+.slider__pagination-bullet {
   width: 62px;
   height: 4px;
   background-color: $base-white;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0 4px;
+  cursor: pointer;
 }
 
-.slider-pagination-bullet--active {
+.slider__pagination-bullet--active {
   background-color: $base-primary;
 }
