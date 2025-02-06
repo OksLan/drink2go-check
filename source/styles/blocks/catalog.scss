@@ -25,12 +25,9 @@
   font-weight: 600;
 }
 
-/* цена */
-.filter__title--pricerange {
-  margin-bottom: 32px;
-}
-
-.filter__pricerange {
+/* цена бегунки */
+.pricerange {
+  margin-top: 12px;
   margin-bottom: 32px;
 }
 
@@ -103,11 +100,12 @@
   padding-left: 34px;
 }
 
-/* молоко */
+/* молоко radio */
 .filter__list--radio {
   margin: 0 0 24px;
 }
-.filter__text--radio {
+
+.filter__label--radio {
   position: relative;
   min-width: 100%;
   font-size: 16px;
@@ -115,7 +113,7 @@
   cursor: pointer;
 }
 
-.filter__box[type=radio]:checked+.filter__text--radio::before {
+.filter__box[type=radio]:checked+.filter__label--radio::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -127,7 +125,7 @@
   z-index: 2;
 }
 
-.filter__text--radio::after {
+.filter__label--radio::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -139,20 +137,20 @@
   left: 0;
 }
 
-.filter__box[type=radio]:checked+.filter__text--radio::after {
+.filter__box[type=radio]:checked+.filter__label--radio::after {
   border-color: $base-primary;
 }
 
-.filter__box[type=radio]:disabled+.filter__text--radio::after {
+.filter__box[type=radio]:disabled+.filter__label--radio::after {
   border-color: $light-grey;
 }
 
-/* страна */
+/* страна checkbox*/
 .filter__list--checkbox {
   margin: 0 0 29px;
 }
 
-.filter__text--checkbox {
+.filter__label--checkbox {
   position: relative;
   font-size: 16px;
   line-height: 24px;
@@ -164,7 +162,7 @@
   padding-left: 52px;
 }
 
-.filter__text--checkbox::before {
+.filter__label--checkbox::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -177,11 +175,11 @@
   z-index: 2;
 }
 
-.filter__box[type=checkbox]:checked+ .filter__text--checkbox::before {
+.filter__box[type=checkbox]:checked+ .filter__label--checkbox::before {
   left: 19px;
 }
 
-.filter__text--checkbox::after {
+.filter__label--checkbox::after {
   content: "";
   position: absolute;
   width: 42px;
@@ -192,11 +190,11 @@
   top: 0;
 }
 
-.filter__box[type=checkbox]:checked+ .filter__text--checkbox::after {
+.filter__box[type=checkbox]:checked+ .filter__label--checkbox::after {
   background-color: $base-primary;
 }
 
-.filter__box[type=checkbox]:disabled+ .filter__text--checkbox::after {
+.filter__box[type=checkbox]:disabled+ .filter__label--checkbox::after {
   background-color: $light-grey;
 }
 
@@ -310,12 +308,12 @@
 }
 
 /* пагинация */
-.pagination {
+.catalog__pagination {
   display: flex;
   justify-content: space-between;
 }
 
-.pagination__button {
+.catalog__pagination-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,17 +329,17 @@
   line-height: 24px;
 }
 
-.pagination__button-icon {
+.catalog__pagination-button-icon {
   width: 6px;
   height: auto;
   fill: $base-primary;
 }
 
-.pagination__button-text {
+.catalog__pagination-button-text {
   display: none;
 }
 
-.pagination__list {
+.catalog__pagination-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -350,17 +348,17 @@
   padding: 0;
 }
 
-.pagination__item {
+.catalog__pagination-item {
   list-style: none;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 
-.pagination__item:first-child {
+.catalog__pagination-item:first-child {
   margin-left: 20px;
 }
 
-.pagination__link {
+.catalog__pagination-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -368,4 +366,11 @@
   min-height: 40px;
   text-decoration: none;
   background-color: $base-white;
+  color: $base-primary;
+}
+
+.catalog__pagination-link--current {
+  background-color: transparent;
+  font-weight: 600;
+  color: $base-black;
 }
