@@ -1,0 +1,72 @@
+/* цена бегунки */
+.pricerange {
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.pricerange__scale {
+  width: 100%;
+  background-color: $light-grey;
+  position: relative;
+  height: 2px;
+}
+
+.pricerange__bar {
+  position: relative;
+  height: 4px;
+  width: 85%;
+  background-color: $primary-lighter;
+}
+
+.pricerange__pin {
+  position: absolute;
+  top: -11px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $base-white;
+  border: 2px solid $primary-lighter;
+  cursor: pointer;
+}
+
+.pricerange__pin--min {
+  left: 0;
+}
+
+.pricerange__pin--max {
+  left: 100%;
+}
+
+.pricerange__input-boxes {
+  display: flex;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.pricerange__input-box--from {
+  margin-right: 30px;
+}
+
+.pricerange__input-value {
+  width: 100%;
+  min-height: 40px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 5px 10px;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+}
+
+.pricerange__input-boxes::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: $base-grey;
+  top: 20px;
+  right: 135px;
+}

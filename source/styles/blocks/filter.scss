@@ -1,0 +1,138 @@
+.filter__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter__title {
+  text-align: left;
+  padding: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.filter__list {
+  text-align: left;
+}
+
+.filter__item {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.filter__text {
+  padding-left: 34px;
+}
+
+/* молоко radio */
+.filter__list--radio {
+  margin: 0 0 24px;
+}
+
+.filter__label--radio {
+  position: relative;
+  min-width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.filter__box[type=radio]:checked+.filter__label--radio::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $base-primary;
+  top: 2px;
+  left: 4px;
+  z-index: 2;
+}
+
+.filter__label--radio::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $base-white;
+  border: 2px solid $base-grey;
+  top: -2px;
+  left: 0;
+}
+
+.filter__box[type=radio]:checked+.filter__label--radio::after {
+  border-color: $base-primary;
+}
+
+.filter__box[type=radio]:disabled+.filter__label--radio::after {
+  border-color: $light-grey;
+}
+
+/* страна checkbox*/
+.filter__list--checkbox {
+  margin: 0 0 29px;
+}
+
+.filter__label--checkbox {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.filter__text-left {
+  display: block;
+  padding-left: 52px;
+}
+
+.filter__label--checkbox::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: none;
+  top: 2px;
+  left: 2px;
+  z-index: 2;
+}
+
+.filter__box[type=checkbox]:checked+ .filter__label--checkbox::before {
+  left: 19px;
+}
+
+.filter__label--checkbox::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  background-color: $base-grey;
+  border-radius: 12px;
+  left: 0;
+  top: 0;
+}
+
+.filter__box[type=checkbox]:checked+ .filter__label--checkbox::after {
+  background-color: $base-primary;
+}
+
+.filter__box[type=checkbox]:disabled+ .filter__label--checkbox::after {
+  background-color: $light-grey;
+}
+
+/* кнопки */
+.filter__button {
+  width: 100%;
+  min-height: 40px;
+}
+
+.filter__button--submit {
+  margin-bottom: 20px;
+}
+
+.filter__button--reset {
+  background-color: $base-white;
+  color: $base-primary;
+}
