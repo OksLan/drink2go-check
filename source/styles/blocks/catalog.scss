@@ -2,25 +2,74 @@
   background-color: $lightest-grey;
   padding: 50px 20px 20px;
   text-align: center;
+
+  @media screen and (width >= 768px) {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  @media screen and (width >= 1440px) {
+    padding: 100px 40px 120px;
+  }
 }
 
 .catalog__heading {
   margin-bottom: 20px;
+
+  @media screen and (width >= 1440px) {
+    margin-bottom: 31px;
+  }
+}
+
+.catalog__filter {
+  @media screen and (width >= 768px) {
+    margin-bottom: 70px;
+  }
+
+  @media screen and (width >= 1440px) {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 318px 1fr;
+  }
 }
 
 .catalog__form {
   margin-bottom: 36px;
+
+  @media screen and (width >= 768px) {
+    margin-bottom: 34px;
+  }
 }
 
 /* список карточек товаров */
 .catalog__list-container {
   margin-bottom: 40px;
+
+  @media screen and (width >= 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.catalog__list {
+  @media screen and (width >= 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media screen and (width >= 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* пагинация */
 .catalog__pagination {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (width >= 768px) {
+    justify-content: flex-end;
+  }
 }
 
 .catalog__pagination-button {
@@ -37,16 +86,30 @@
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
+
+  @media screen and (width >= 768px) {
+    width: min-content;
+    padding: 5px 20px;
+  }
 }
 
 .catalog__pagination-button-icon {
   width: 6px;
   height: auto;
   fill: $base-primary;
+
+  @media screen and (width >= 768px) {
+    display: none;
+  }
 }
 
 .catalog__pagination-button-text {
   display: none;
+
+  @media screen and (width >= 768px) {
+    display: block;
+    letter-spacing: .08em;
+  }
 }
 
 .catalog__pagination-list {

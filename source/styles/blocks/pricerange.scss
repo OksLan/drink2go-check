@@ -41,6 +41,10 @@
   display: flex;
   position: relative;
   margin-bottom: 24px;
+
+  @media screen and (width >= 1440px) {
+    margin-bottom: 0;
+  }
 }
 
 .pricerange__input-box--from {
@@ -67,6 +71,9 @@
   width: 10px;
   height: 2px;
   background-color: $base-grey;
-  top: 20px;
-  right: 135px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }

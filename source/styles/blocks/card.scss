@@ -5,14 +5,23 @@
   background-color: $base-white;
   border-radius: 4px;
   text-align: left;
+
+  @media screen and (width >= 768px) {
+    padding: 50px 30px 30px;
+    margin: 0;
+  }
 }
 
 .card__link {
   display: block;
 }
 
-.card__link--title {
+.card__title {
   margin-bottom: 4px;
+
+  @media screen and (width >= 768px) {
+    margin-bottom: 9px;
+  }
 }
 
 .card__image {
@@ -21,6 +30,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
+
+  @media screen and (width >= 768px) {
+    margin-bottom: 31px;
+  }
 }
 
 .card__text {

@@ -314,8 +314,10 @@
               </ul>
             </fieldset>
 
-            <button class="filter__button filter__button--submit button" type="submit">Применить</button>
-            <button class="filter__button filter__button--reset button" type="reset">Сбросить</button>
+            <div class="filter__buttons">
+              <button class="filter__button filter__button--submit button" type="submit">Применить</button>
+              <button class="filter__button button--reset button" type="reset">Сбросить</button>
+            </div>
 
           </form>
 
@@ -443,7 +445,7 @@
                 </div>
               </article>
 
-              <article class="ccatalog__list-item card">
+              <article class="catalog__list-item card">
                 <a class="card__link card__link--image" href="#">
                   <picture>
                     <source media="(min-width: 1300px)" width="130" height="188" type="image/webp" srcset="images/products/brown-5@1x.webp 1x, images/products/brown-5@2x.webp 2x">
@@ -506,7 +508,7 @@
             <svg class="catalog__pagination-button-icon" width="6" height="10">
               <use href="icons/stack.svg#arrow-prev"></use>
             </svg>
-            <span class="catalog__pagination-button-text">Предыдущая страница</span>
+            <span class="catalog__pagination-button-text">Назад</span>
           </button>
           <ol class="catalog__pagination-list">
             <li class="catalog__pagination-item">
@@ -523,7 +525,7 @@
             <svg class="catalog__pagination-button-icon" width="6" height="10">
               <use href="icons/stack.svg#arrow-next"></use>
             </svg>
-            <span class="catalog__pagination-button-text">Следующая страница</span>
+            <span class="catalog__pagination-button-text">Вперёд</span>
           </button>
         </div>
       </section>
