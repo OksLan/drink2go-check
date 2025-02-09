@@ -4,12 +4,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 30px;
   }
-
-  @media screen and (width >= 1440px) {
-    grid-template-columns: 1fr;
-    row-gap: 30px;
-    height: min-content;
-  }
 }
 
 .filter__group {
