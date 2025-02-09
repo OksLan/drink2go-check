@@ -200,6 +200,14 @@
   position: absolute;
 }
 
+.slider-button-prev:disabled,
+.slider-button-next:disabled {
+  color: $base-grey;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
 /* пагинация */
 .slider__pagination {
   position: absolute;
