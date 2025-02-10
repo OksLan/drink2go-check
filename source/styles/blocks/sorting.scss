@@ -8,6 +8,11 @@
     justify-content: end;
     margin-bottom: 20px;
   }
+
+  @media (min-width: 1440px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 }
 
 .sorting__group {

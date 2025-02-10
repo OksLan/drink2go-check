@@ -7,6 +7,10 @@
     padding-top: 80px;
     padding-bottom: 90px;
   }
+
+  @media screen and (width >= 1440px) {
+    padding: 100px 41px 120px 40px;
+  }
 }
 
 .catalog__heading {
@@ -20,6 +24,11 @@
 .catalog__filter {
   @media screen and (width >= 768px) {
     margin-bottom: 70px;
+  }
+
+  @media screen and (width >= 1440px) {
+    display: grid;
+    column-gap: 30px;
   }
 }
 
@@ -38,6 +47,11 @@
   @media screen and (width >= 768px) {
     margin-bottom: 0;
   }
+
+  @media screen and (width >= 1440px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 }
 
 .catalog__list {
@@ -47,7 +61,7 @@
     gap: 30px;
   }
 
-  @media screen and (width >= 1440px) {
+  @media screen and (width >= 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }

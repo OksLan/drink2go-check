@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let slideIndex = 0;
 
   const updateButtons = () => {
+    prevButton.disabled = slideIndex === 0;
+    nextButton.disabled = slideIndex === slideCount - 1;
+
     prevButton.classList.toggle('disabled', slideIndex === 0);
     nextButton.classList.toggle('disabled', slideIndex === slideCount - 1);
-
-    console.log('Prev disabled:', prevButton.classList.contains('disabled'));
-    console.log('Next disabled:', nextButton.classList.contains('disabled'));
   };
 
   prevButton.addEventListener('click', () => {
@@ -52,9 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButtons();
   };
 
-  window.addEventListener('load', () => {
-    slide();
-  });
-
+  window.addEventListener('load', slide);
   updateButtons();
 });
