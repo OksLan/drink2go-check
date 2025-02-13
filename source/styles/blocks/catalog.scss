@@ -1,6 +1,6 @@
 .catalog {
   background-color: $lightest-grey;
-  padding: 50px 20px 20px;
+  padding: 50px 20px 24px;
   text-align: center;
 
   @media screen and (width >= 768px) {
@@ -99,7 +99,7 @@
 }
 
 .catalog__pagination-button-icon {
-  width: 6px;
+  width: 10px;
   height: auto;
   fill: $base-primary;
 

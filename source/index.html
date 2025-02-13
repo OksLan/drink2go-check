@@ -531,6 +531,22 @@
 
       <section class="map" data-test="map">
         <h2 class="map__heading heading visually-hidden">Как нас найти</h2>
+        <iframe class="map__iframe map-responsive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124.8012434541681!2d30.317407905483574!3d59.968310985876094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1739462698738!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" place-name="Drink2go" title="Магазин напитков Drink2go"></iframe>
+        <div class="map__pic">
+          <picture>
+              <source media="(min-width: 1440px)" width="1440" height="540" type="image/webp" srcset="images/map/map-desktop@1x.webp, images/map/map-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="768" height="480" type="image/webp" srcset="images/map/map-tablet@1x.webp, images/map/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="images/map/map-mobile@1x.webp, images/map/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" width="1440" height="540" type="image/png" srcset="images/map/map-desktop@1x.png, images/map/map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" width="768" height="480" type="image/png" srcset="images/map/map-tablet@1x.png, images/map/map-tablet@2x.png 2x">
+              <img src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420" alt="Магазин напитков Drink2go на карте Санкт-Петербурга">
+          </picture>
+        </div>
+        <div class="map__pin">
+          <svg class="map__pin-icon" width="38" height="50">
+            <use href="icons/stack.svg#map-pin"></use>
+          </svg>
+        </div>
       </section>
 
     </main>
