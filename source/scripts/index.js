@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevButton = document.querySelector('.slider-button-prev');
   const nextButton = document.querySelector('.slider-button-next');
   const slides = Array.from(slider.querySelectorAll('.slide'));
+  const paginationBullets = Array.from(document.querySelectorAll('.slider__pagination-bullet'));
   const slideCount = slides.length;
   let slideIndex = 0;
 
@@ -29,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     prevButton.classList.toggle('disabled', slideIndex === 0);
     nextButton.classList.toggle('disabled', slideIndex === slideCount - 1);
+  };
+
+  const updatePagination = () => {
+    paginationBullets.forEach((bullet, index) => {
+      bullet.classList.toggle('slider__pagination-bullet--active', index === slideIndex);
+    });
   };
 
   prevButton.addEventListener('click', () => {
@@ -45,13 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  paginationBullets.forEach((bullet, index) => {
+    bullet.addEventListener('click', () => {
+      slideIndex = index;
+      slide();
+    });
+  });
+
   const slide = () => {
     const imageWidth = slider.clientWidth;
     const slideOffset = -slideIndex * imageWidth;
     slider.style.transform = `translateX(${slideOffset}px)`;
     updateButtons();
+    updatePagination();
   };
 
   window.addEventListener('load', slide);
   updateButtons();
+  updatePagination();
 });

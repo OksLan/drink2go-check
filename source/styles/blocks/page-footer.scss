@@ -1,0 +1,30 @@
+.page-footer__socials {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.page-footer__logo {
+  margin-right: 15px;
+}
+
+.page-footer__logo-pic {
+  width: 82px;
+  height: auto;
+}
+
+.page-footer__logo-text {
+  display: none;
+}
+
+.page-footer__socials::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: $base-secondary;
+  left: 0;
+  bottom: 0;
+}
