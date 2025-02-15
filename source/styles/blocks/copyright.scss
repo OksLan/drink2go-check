@@ -1,0 +1,30 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px 29px;
+
+  @media screen and (width >= 768px) {
+    margin-top: 38px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (width >= 1440px) {
+    margin-top: 20px;
+  }
+
+}
+
+.copyright__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-grey;
+  margin-right: 3px;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

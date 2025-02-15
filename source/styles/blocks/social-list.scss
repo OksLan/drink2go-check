@@ -6,6 +6,10 @@
   flex-grow: 1;
   margin: 0;
   padding: 0;
+
+  @media screen and (width >= 1440px) {
+    align-items: start;
+  }
 }
 
 .social-list__item {
