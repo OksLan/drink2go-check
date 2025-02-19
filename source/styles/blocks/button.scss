@@ -14,6 +14,19 @@
   cursor: pointer;
 }
 
+.button:hover,
+.button:focus {
+  background-color: $primary-lighter;
+}
+
+.button:active {
+  background-color: $primary-darker;
+}
+
+.button:disabled {
+  background-color: $base-grey;
+}
+
 .button--card {
   font-size: 14px;
   line-height: 20px;
@@ -25,3 +38,18 @@
   color: $base-primary;
 }
 
+.button--reset:hover,
+.button--reset:focus {
+  background-color: $primary-lighter;
+  color: $base-white;
+}
+
+.button--reset:active {
+  background-color: $primary-darker;
+  color: $base-white;
+}
+
+.button--reset:disabled {
+  background-color: $base-grey;
+  color: $base-white;
+}
