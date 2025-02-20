@@ -31,8 +31,23 @@
   cursor: pointer;
 }
 
+.social-list__link:hover,
+.social-list__link:focus {
+  background-color: $base-secondary;
+}
+
+.social-list__link:active {
+  background-color: $primary-opacity;
+}
+
 .social-list-icon {
   width: 20px;
   height: auto;
   fill: $base-grey;
+}
+
+.social-list__link:hover .social-list-icon,
+.social-list__link:focus .social-list-icon,
+.social-list__link:active .social-list-icon {
+  fill: $base-primary;
 }

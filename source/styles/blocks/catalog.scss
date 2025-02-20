@@ -84,7 +84,6 @@
   min-width: 40px;
   height: 40px;
   background-color: $base-white;
-  color: $base-primary;
   text-decoration: none;
   border-radius: 4px;
   border: none;
@@ -96,6 +95,19 @@
     width: min-content;
     padding: 5px 20px;
   }
+}
+
+.catalog__pagination-button:hover,
+.catalog__pagination-button:focus {
+  background-color: $primary-lighter;
+}
+
+.catalog__pagination-button:active {
+  background-color: $primary-darker;
+}
+
+.catalog__pagination-button:disabled {
+  background-color: $light-grey;
 }
 
 .catalog__pagination-button-icon {
@@ -154,4 +166,27 @@
   background-color: transparent;
   font-weight: 600;
   color: $base-black;
+}
+
+.catalog__pagination-link:hover,
+.catalog__pagination-link:focus {
+  background-color: $base-primary;
+  color: $base-white;
+}
+
+.catalog__pagination-link:active {
+  background-color: $primary-darker;
+  color: $base-white;
+}
+
+.catalog__pagination-link:disabled {
+  background-color: $light-grey;
+  color: $base-white;
+}
+
+.catalog__pagination-button:hover .catalog__pagination-button-icon,
+.catalog__pagination-button:focus .catalog__pagination-button-icon,
+.catalog__pagination-button:active .catalog__pagination-button-icon,
+.catalog__pagination-button:default .catalog__pagination-button-icon {
+  fill: $base-white;
 }
