@@ -59,6 +59,17 @@
   }
 }
 
+.user-nav__link:hover .user-nav__icon,
+.user-nav__link:focus .user-nav__icon,
+.user-nav__link:active .user-nav__icon {
+  fill: $base-primary;
+}
+
+.user-nav__link:active {
+  background-color: $base-secondary;
+  color: $base-primary;
+}
+
 .user-nav__icon--account {
   width: 16px;
   height: auto;
@@ -76,10 +87,14 @@
   background-color: transparent;
 }
 
+.user-nav__toggle:active {
+  background-color: $base-secondary;
+}
+
 .user-nav__toggle--open {
   background-image: url("/source/icons/burger.svg");
   display: block;
-  
+
     @media screen and (width >= 768px) {
       display: none;
     }

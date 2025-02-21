@@ -66,6 +66,15 @@
   text-transform: uppercase;
 }
 
+.links__link:hover,
+.links__link:focus {
+  color: $primary-lighter;
+}
+
+.links__link:active {
+  color: $primary-darker;
+}
+
 .links::after {
   content: "";
   background-color: #f0ebff;

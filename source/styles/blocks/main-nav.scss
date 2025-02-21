@@ -89,3 +89,13 @@
     background-color: $base-primary;
   }
 }
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: $base-primary;
+}
+
+.main-nav__link:active {
+  color: $base-primary;
+  background-color: $base-secondary;
+}
