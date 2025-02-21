@@ -211,3 +211,8 @@
 .slider__pagination-bullet--active {
   background-color: $base-primary;
 }
+
+.slider__pagination-bullet:hover,
+.slider__pagination-bullet:focus {
+  background-color: $primary-opacity;
+}

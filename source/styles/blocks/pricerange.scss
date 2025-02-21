@@ -4,6 +4,7 @@
   margin-bottom: 32px;
 }
 
+/* шкала */
 .pricerange__scale {
   width: 100%;
   background-color: $light-grey;
@@ -29,6 +30,31 @@
   cursor: pointer;
 }
 
+.pricerange__pin:hover::after,
+.pricerange__pin:focus::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 50%;
+  background-color: $primary-opacity;
+  top: 2px;
+  right: 2px;
+}
+
+.pricerange__pin:active::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 50%;
+  background-color: $base-primary;
+  top: 2px;
+  right: 2px;
+}
+
 .pricerange__pin--min {
   left: 0;
 }
@@ -37,6 +63,15 @@
   left: 100%;
 }
 
+.pricerange__scale:disabled .pricerange__pin {
+  border: $lightest-grey;
+}
+
+.pricerange__scale:disabled .pricerange__bar {
+  background-color: $base-grey;
+}
+
+/* окошки */
 .pricerange__input-boxes {
   display: flex;
   position: relative;
@@ -63,6 +98,15 @@
   padding: 5px 10px;
   border: 2px solid $primary-lighter;
   border-radius: 4px;
+}
+
+.pricerange__input-value:focus {
+  border-color: $primary-darker;
+}
+
+.pricerange__input-value:disabled {
+  border-color: $light-grey;
+  background-color: transparent;
 }
 
 .pricerange__input-boxes::after {

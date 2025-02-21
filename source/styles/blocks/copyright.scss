@@ -28,3 +28,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.copyright__link-icon:hover,
+.copyright__link-icon:focus {
+  fill: $base-primary !important;
+}
+
+.copyright__link-icon:active {
+  fill: $primary-darker !important;
+}
+
+// .copyright__link:hover .copyright__link-icon,
+// .copyright__link:focus .copyright__link-icon {
+//   fill: $base-primary;
+// }
+
+// .copyright__link:active .copyright__link-icon {
+//   fill: $primary-darker;
+// }
