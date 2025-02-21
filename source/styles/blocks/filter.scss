@@ -47,7 +47,7 @@
   padding-left: 34px;
 }
 
-/* молоко radio */
+/* radio молоко */
 .filter__list--radio {
   margin: 0 0 24px;
 
@@ -88,15 +88,34 @@
   left: 0;
 }
 
+.filter__label--radio:hover::before,
+.filter__label--radio:focus::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $primary-opacity;
+  top: 2px;
+  left: 4px;
+  z-index: 2;
+}
+
+.filter__label--radio:hover::after,
+.filter__label--radio:focus::after {
+  border-color: $primary-lighter;
+}
+
 .filter__box[type=radio]:checked+.filter__label--radio::after {
   border-color: $base-primary;
 }
 
 .filter__box[type=radio]:disabled+.filter__label--radio::after {
   border-color: $light-grey;
+  background-color: transparent;
 }
 
-/* страна checkbox*/
+/* checkbox страна */
 .filter__list--checkbox {
   margin: 0 0 29px;
 
@@ -122,7 +141,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: $base-white;
+  background-color: $lightest-grey;
   border-radius: 50%;
   border: none;
   top: 2px;
@@ -151,6 +170,13 @@
 
 .filter__box[type=checkbox]:disabled+ .filter__label--checkbox::after {
   background-color: $light-grey;
+}
+
+.filter__label--checkbox:hover::after,
+.filter__label--checkbox:focus::after {
+  background-color: $primary-opacity;
+  border: 2px solid $primary-lighter;
+  box-sizing: border-box;
 }
 
 /* кнопки */
