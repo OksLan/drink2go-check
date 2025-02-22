@@ -49,11 +49,16 @@
 }
 
 .sorting__list::after {
-  content: "";
+  content: "ыыыыыы";
   position: absolute;
-  background-image: url(../../icons/arrow-down.svg);
+  background-image: url("../../icons/arrow-down.svg");
   background-repeat: no-repeat;
-  top: 50%;
+  top: 50px;
+  right: 50px;
+  z-index: 20;
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .sorting__list:hover,

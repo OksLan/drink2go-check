@@ -69,15 +69,15 @@ input::placeholder {
   color: $base-grey;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
+// select {
+//   appearance: none;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   width: 100%;
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   cursor: pointer;
+// }
 
 .badge {
   font-size: 12px;
