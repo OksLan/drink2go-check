@@ -158,8 +158,9 @@
           </div>
         </div>
 
-        <button class="slider-button-prev" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-        <button class="slider-button-next" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
+        <div class="slider-button-prev" type="button" aria-label="Посмотреть предыдущий слайд"></div>
+        <div class="slider-button-next" type="button" aria-label="Посмотреть следующий слайд"></div>
+
 
         <div class="slider__pagination">
           <span class="slider__pagination-bullet slider__pagination-bullet--active"></span>
@@ -503,7 +504,7 @@
         </div>
 
         <div class="catalog__pagination">
-          <button class="catalog__pagination-button catalog__pagination-button--prev">
+          <button class="catalog__pagination-button catalog__pagination-button--prev" type="button">
             <svg class="catalog__pagination-button-icon" width="6" height="10">
               <use href="icons/stack.svg#arrow-prev"></use>
             </svg>
@@ -520,7 +521,7 @@
                 <a class="catalog__pagination-link" href="#">3</a>
             </li>
           </ol>
-          <button class="catalog__pagination-button catalog__pagination-button--next">
+          <button class="catalog__pagination-button catalog__pagination-button--next" type="button">
             <svg class="catalog__pagination-button-icon" width="6" height="10">
               <use href="icons/stack.svg#arrow-next"></use>
             </svg>
@@ -543,7 +544,7 @@
           </picture>
         </div>
         <div class="map__pin">
-          <img class="map__pin-icon" src="icons/map-pin.svg" alt="маркер карты" tabindex="0" role="button">
+          <img class="map__pin-icon" src="icons/map-pin.svg" alt="" tabindex="0" role="button">
         </div>
       </section>
 

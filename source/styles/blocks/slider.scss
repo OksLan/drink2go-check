@@ -156,31 +156,66 @@
 .slider-button-prev,
 .slider-button-next {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  color: $base-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  top: 0;
+  min-width: 20px;
+  cursor: pointer;
+
+  @media screen and (width >= 768px){
+    min-width: 80px;
+    height: calc(100% - 188px);
+  }
+
+  @media screen and (width >= 1440px){
+    height: 100%;
+  }
 }
 
 .slider-button-prev {
   left: 0;
 }
 
+.slider-button-prev::after {
+  content: "";
+  background-image: url("../../icons/arrow-prev.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
 .slider-button-next {
   right: 0;
 }
 
-.slider-button-prev:disabled,
-.slider-button-next:disabled {
-  color: $base-grey;
-  cursor: not-allowed;
-  pointer-events: none;
+.slider-button-next::after {
+  content: "";
+  background-image: url("../../icons/arrow-next.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
+.slider-button-prev:hover,
+.slider-button-next:hover,
+.slider-button-prev:focus,
+.slider-button-next:focus {
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+}
+
+.slider-button-prev:active,
+.slider-button-next:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.slider-button-prev.disabled,
+.slider-button-next.disabled {
+  opacity: .35;
+  pointer-events: none;
+}
 
 /* пагинация */
 .slider__pagination {
