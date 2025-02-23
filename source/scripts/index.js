@@ -176,3 +176,27 @@ document.addEventListener("DOMContentLoaded", function () {
   updateInputs();
 });
 
+
+/* стрелка селекта */
+document.addEventListener("DOMContentLoaded", function () {
+  const select = document.querySelector(".sorting__list");
+
+  select.style.backgroundImage = "url('../icons/stack.svg#arrow-down')";
+
+  select.addEventListener("focus", function () {
+    select.style.backgroundImage = "url('../icons/stack.svg#arrow-up')";
+  });
+
+  select.addEventListener("change", function () {
+    select.style.backgroundImage = "url('../icons/stack.svg#arrow-down')";
+  });
+
+  select.addEventListener("blur", function () {
+    select.style.backgroundImage = "url('../icons/stack.svg#arrow-down')";
+  });
+});
+
+
+
+
+

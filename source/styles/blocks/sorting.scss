@@ -26,42 +26,35 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  margin-right: 8px;
 }
 
 .sorting__box {
-  width: 165px;
   position: relative;
+  display: inline-block;
 }
 
 .sorting__list {
-  position: relative;
+  padding-right: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  width: 100%;
+  width: 165px;
   color: $base-primary;
-  border-radius: 4px;
-  border: none;
   background-color: transparent;
   padding: 4px 29px 4px 10px;
   cursor: pointer;
-}
-
-.sorting__list::after {
-  content: "ыыыыыы";
-  position: absolute;
-  background-image: url("../../icons/arrow-down.svg");
-  background-repeat: no-repeat;
-  top: 50px;
-  right: 50px;
-  z-index: 20;
-  width: 20px;
-  height: 20px;
-  display: block;
+  border: none;
+  background: url("../../icons/arrow-down.svg") no-repeat right 8px center;
+  background-size: 10px;
 }
 
 .sorting__list:hover,
 .sorting__list:focus {
   background-color: $base-secondary;
+  outline: none;
 }
