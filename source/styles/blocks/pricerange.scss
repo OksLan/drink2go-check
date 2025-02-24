@@ -2,73 +2,51 @@
 .pricerange {
   margin-top: 12px;
   margin-bottom: 32px;
-}
-
-/* шкала */
-.pricerange__scale {
-  width: 100%;
-  background-color: $light-grey;
   position: relative;
-  height: 2px;
-}
-
-.pricerange__bar {
-  position: relative;
-  height: 4px;
-  width: 85%;
-  background-color: $primary-lighter;
-}
-
-.pricerange__pin {
-  position: absolute;
-  top: -11px;
-  width: 24px;
   height: 24px;
-  border-radius: 50%;
-  background-color: $base-white;
-  border: 2px solid $primary-lighter;
-  cursor: pointer;
 }
 
-.pricerange__pin:hover::after,
-.pricerange__pin:focus::after {
-  content: "";
+/* шакала с пинами */
+.pricerange__pin {
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
   position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 0;
-  border-radius: 50%;
-  background-color: $primary-opacity;
-  top: 2px;
-  right: 2px;
-}
-
-.pricerange__pin:active::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 0;
-  border-radius: 50%;
-  background-color: $base-primary;
-  top: 2px;
-  right: 2px;
-}
-
-.pricerange__pin--min {
   left: 0;
+  top: 12px;
+  outline: none;
+  height: 4px;
+  background-image: linear-gradient(
+    to right,
+    $primary-lighter 90%,
+    $light-grey 10%
+  );
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: $base-white;
+    outline: 2px solid $primary-lighter;
+    border: 2px solid white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+  }
+  &::-webkit-slider-runnable-track {
+  }
+  &::-moz-range-track {
+  }
 }
 
-.pricerange__pin--max {
-  left: 100%;
-}
-
-.pricerange__scale:disabled .pricerange__pin {
-  border: $lightest-grey;
-}
-
-.pricerange__scale:disabled .pricerange__bar {
-  background-color: $base-grey;
+.pricerange__pin::-webkit-slider-thumb:hover,
+.pricerange__pin::-webkit-slider-thumb:focus,
+.pricerange__pin::-webkit-slider-thumb:active {
+  background-color: $base-primary;
 }
 
 /* окошки */

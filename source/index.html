@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Интернет-магазин по продаже кофейных напитков Drink2Go</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Интернет-магазин по продаже кофейных напитков Drink2Go</title>
 
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicons/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer="defer"></script>
-  </head>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+
+  <script src="scripts/index.js" defer="defer"></script>
+</head>
 
   <body class="page__body">
     <header class="page-header" data-test="header">
@@ -225,27 +228,21 @@
 
             <fieldset class="filter__group price-range">
               <legend class="filter__title">Цена</legend>
-                <div class="pricerange">
-                  <div class="pricerange__scale">
-                    <div class="pricerange__bar">
-                      <button class="pricerange__pin pricerange__pin--min" type="button">
-                        <span class="visually-hidden">Дешевле</span>
-                      </button>
-                      <button class="pricerange__pin pricerange__pin--max" type="button">
-                        <span class="visually-hidden">Дороже</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="pricerange__input-boxes">
-                  <label class="pricerange__input-box pricerange__input-box--from">
-                    <input class="pricerange__input-value pricerange__input-value--min" type="text" name="min-value" placeholder="0">
-                  </label>
+              <div class="pricerange">
+                <input value="0" min="0" max="1000" step="10" type="range" class="pricerange__pin pricerange__pin--min">
+                <input value="900" min="0" max="1000" step="10" type="range" class="pricerange__pin pricerange__pin--max">
+              </div>
+              <div class="pricerange__input-boxes">
+                <label class="pricerange__input-box pricerange__input-box--from">
+                  <input class="pricerange__input-value pricerange__input-value--min" type="text" name="min-value"
+                    placeholder="0">
+                </label>
 
-                  <label class="pricerange__input-box pricerange__input-box--to">
-                    <input class="pricerange__input-value pricerange__input-value--max" type="text" name="max-value" placeholder="900">
-                  </label>
-                </div>
+                <label class="pricerange__input-box pricerange__input-box--to">
+                  <input class="pricerange__input-value pricerange__input-value--max" type="text" name="max-value"
+                    placeholder="900">
+                </label>
+              </div>
             </fieldset>
 
             <fieldset class="filter__group radio">
@@ -532,21 +529,30 @@
 
       <section class="map" data-test="map">
         <h2 class="map__heading heading visually-hidden">Как нас найти</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aad6a5c04c317f0cbeb29850abe6bef52a6849c15994ca64adaa12a8aa18dea03&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aad6a5c04c317f0cbeb29850abe6bef52a6849c15994ca64adaa12a8aa18dea03&amp;source=constructor"
+          width="100%" height="100%" frameborder="0"></iframe>
         <div class="map__pic">
           <picture>
-              <source media="(min-width: 1440px)" width="1440" height="540" type="image/webp" srcset="images/map/map-desktop@1x.webp, images/map/map-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="768" height="480" type="image/webp" srcset="images/map/map-tablet@1x.webp, images/map/map-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="images/map/map-mobile@1x.webp, images/map/map-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" width="1440" height="540" type="image/png" srcset="images/map/map-desktop@1x.png, images/map/map-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" width="768" height="480" type="image/png" srcset="images/map/map-tablet@1x.png, images/map/map-tablet@2x.png 2x">
-              <img src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420" alt="Магазин напитков Drink2go на карте Санкт-Петербурга">
+            <source media="(min-width: 1440px)" width="1440" height="540" type="image/webp"
+              srcset="images/map/map-desktop@1x.webp, images/map/map-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="768" height="480" type="image/webp"
+              srcset="images/map/map-tablet@1x.webp, images/map/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="images/map/map-mobile@1x.webp, images/map/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" width="1440" height="540" type="image/png"
+              srcset="images/map/map-desktop@1x.png, images/map/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="768" height="480" type="image/png"
+              srcset="images/map/map-tablet@1x.png, images/map/map-tablet@2x.png 2x">
+            <img src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420"
+              alt="Магазин напитков Drink2go на карте Санкт-Петербурга">
           </picture>
         </div>
         <div class="map__pin">
-          <img class="map__pin-icon" src="icons/map-pin.svg" alt="" tabindex="0" role="button">
+          <img class="map__pin-icon" src="icons/map-pin.svg" alt="маркер карты" tabindex="0" role="button">
         </div>
       </section>
+
+      <div id="ymap" style="width: 100%; height: 480px; margin-top: 50px;"></div>
 
     </main>
 

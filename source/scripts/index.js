@@ -73,108 +73,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* pricerange */
-/* убрать/вернуть плейсхолдеры в боксах в фокусе */
-document.addEventListener("DOMContentLoaded", function () {
-  const minInput = document.querySelector(".pricerange__input-value--min");
-  const maxInput = document.querySelector(".pricerange__input-value--max");
+const ranges = document.querySelectorAll('.pricerange__pin');
+const valueMin = document.querySelector('.pricerange__input-value--min');
+const valueMax = document.querySelector('.pricerange__input-value--max');
 
-  minInput.addEventListener("focus", function () {
-      this.placeholder = "";
-  });
-  maxInput.addEventListener("focus", function () {
-      this.placeholder = "";
-  });
+function showValues() {
+  let minVal = Number(ranges[0].value);
+  let maxVal = Number(ranges[1].value);
 
-  minInput.addEventListener("blur", function () {
-      this.placeholder = "0";
-  });
-  maxInput.addEventListener("blur", function () {
-      this.placeholder = "900";
-  });
-});
-
-/* перетягивание пинов и ввод значений в боксы */
-document.addEventListener("DOMContentLoaded", function () {
-  const rangeScale = document.querySelector(".pricerange__scale");
-  const rangeBar = document.querySelector(".pricerange__bar");
-  const minPin = document.querySelector(".pricerange__pin--min");
-  const maxPin = document.querySelector(".pricerange__pin--max");
-  const minInput = document.querySelector(".pricerange__input-value--min");
-  const maxInput = document.querySelector(".pricerange__input-value--max");
-  const resetButton = document.querySelector(".filter__button--reset");
-
-  const minValue = 0;
-  const maxValue = 1000;
-  let minPosition = 0;
-  let maxPosition = rangeScale.offsetWidth - maxPin.offsetWidth;
-
-  function updatePins() {
-      minPin.style.left = `${(minPosition / (rangeScale.offsetWidth - minPin.offsetWidth)) * 100}%`;
-      maxPin.style.left = `${(maxPosition / (rangeScale.offsetWidth - maxPin.offsetWidth)) * 100}%`;
-      rangeBar.style.left = `${(minPosition / rangeScale.offsetWidth) * 100}%`;
-      rangeBar.style.width = `${((maxPosition - minPosition) / rangeScale.offsetWidth) * 100}%`;
+  //avoids slider overlap
+  if (minVal > maxVal) {
+    ranges[0].value = maxVal;
+    ranges[1].value = minVal;
+    minVal = Number(ranges[0].value);
+    maxVal = Number(ranges[1].value);
   }
 
-  function updateInputs() {
-      minInput.value = Math.round(minValue + (minPosition / (rangeScale.offsetWidth - minPin.offsetWidth)) * (maxValue - minValue));
-      maxInput.value = Math.round(minValue + (maxPosition / (rangeScale.offsetWidth - maxPin.offsetWidth)) * (maxValue - minValue));
-  }
+  valueMin.value = minVal;
+  valueMax.value = maxVal;
 
-  function movePin(event, pin) {
-      event.preventDefault();
-      const shiftX = event.clientX - pin.getBoundingClientRect().left;
+ranges[0].style.backgroundImage = ranges[1].style.backgroundImage =
+`linear-gradient(to right, #e2e2e2 0%, #e2e2e2 ${minVal / 10}%, #9070ec ${minVal / 10}%, #9070ec ${maxVal / 10}%, #e2e2e2 ${maxVal / 10}%, #e2e2e2 100%)`;
+}
 
-      function onMouseMove(event) {
-          let newPosition = event.clientX - rangeScale.getBoundingClientRect().left - shiftX;
-          newPosition = Math.max(0, Math.min(newPosition, rangeScale.offsetWidth - pin.offsetWidth));
-
-          if (pin === minPin && newPosition < maxPosition - minPin.offsetWidth) {
-              minPosition = newPosition;
-          } else if (pin === maxPin) {
-              maxPosition = Math.min(newPosition, rangeScale.offsetWidth - maxPin.offsetWidth);
-          }
-
-          updatePins();
-          updateInputs();
-      }
-
-      function onMouseUp() {
-          document.removeEventListener("mousemove", onMouseMove);
-          document.removeEventListener("mouseup", onMouseUp);
-      }
-
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
-  }
-
-  minPin.addEventListener("mousedown", (event) => movePin(event, minPin));
-  maxPin.addEventListener("mousedown", (event) => movePin(event, maxPin));
-
-  minInput.addEventListener("input", function () {
-      let value = Math.min(Math.max(parseInt(this.value) || minValue, minValue), maxValue);
-      minPosition = ((value - minValue) / (maxValue - minValue)) * (rangeScale.offsetWidth - minPin.offsetWidth);
-      updatePins();
-  });
-
-  maxInput.addEventListener("input", function () {
-      let value = Math.min(Math.max(parseInt(this.value) || maxValue, minValue), maxValue);
-      maxPosition = ((value - minValue) / (maxValue - minValue)) * (rangeScale.offsetWidth - maxPin.offsetWidth);
-      if (value === maxValue) {
-          maxPosition = rangeScale.offsetWidth - maxPin.offsetWidth;
-      }
-      updatePins();
-  });
-
-  resetButton.addEventListener("click", function () {
-      minPosition = 0;
-      maxPosition = (900 / maxValue) * (rangeScale.offsetWidth - maxPin.offsetWidth);
-      updatePins();
-      updateInputs();
-  });
-
-  updatePins();
-  updateInputs();
-});
+ranges[0].onchange = showValues;
+ranges[1].onchange = showValues;
 
 
 /* стрелка селекта */
@@ -196,7 +119,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* карта */
+ymaps.ready(init);
 
+function init() {
+  // Создание карты.
+  const myMap = new ymaps.Map("ymap", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    center: [59.968424, 30.317790],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 16,
+    controls: ['zoomControl', 'rulerControl']
+  }, {
+    suppressMapOpenBlock: true
+  });
 
+  myMap.behaviors
+    .disable(['scrollZoom']);
 
+  myMap.controls.remove('routeEditor');
 
+  const myPlacemark = new ymaps.Placemark([59.968424, 30.317790], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '/images/map/MapPin.png',
+    iconImageSize: [38, 50],
+    iconImageOffset: [-3, -42]
+  });
+  myMap.geoObjects.add(myPlacemark);
+}
