@@ -47,27 +47,28 @@
 //   top: 0;
 // }
 
-// .map__pin {
-// width: 38px;
-// height: 50px;
-// z-index: 100;
-// position: absolute;
-// top: 170px;
-// right: 139px;
+.map__pin {
+width: 38px;
+height: 50px;
+z-index: 100;
+position: absolute;
+top: 170px;
+right: 139px;
 
-// @media screen and (width >= 768px) {
-//   top: 202px;
-//   right: 364px;
-//   }
+@media screen and (width >= 768px) {
+  top: 202px;
+  right: 364px;
+  }
 
-//   @media screen and (width >= 1440px) {
-//     top: 228px;
-//     right: 700px;
-//     }
-// }
+  @media screen and (width >= 1440px) {
+    top: 228px;
+    right: 700px;
+    }
+}
 
-// .map__pin-icon {
-//   display: block;
-//   width: 38px;
-//   height: 50px;
-// }
+.map__pin-icon {
+  display: block;
+  width: 38px;
+  height: 50px;
+}
+
