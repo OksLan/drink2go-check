@@ -1,4 +1,4 @@
-/* развернуть/свернуть main-nav*/
+/* развернуть/свернуть main-nav */
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.user-nav__toggle');
   const navList = document.querySelector('.main-nav');
@@ -99,6 +99,17 @@ ranges[0].style.backgroundImage = ranges[1].style.backgroundImage =
 ranges[0].onchange = showValues;
 ranges[1].onchange = showValues;
 
+/* убрать/вернуть плейсхолдер в focus */
+[valueMin, valueMax].forEach(input => {
+  input.addEventListener('focus', () => {
+    input.dataset.placeholder = input.placeholder;
+    input.placeholder = '';
+  });
+  input.addEventListener('blur', () => {
+    input.placeholder = input.dataset.placeholder;
+  });
+});
+
 
 /* стрелка селекта */
 document.addEventListener("DOMContentLoaded", function () {
@@ -141,12 +152,13 @@ function init() {
 
   myMap.controls.remove('routeEditor');
 
+  // маркер на карте
   const myPlacemark = new ymaps.Placemark([59.968424, 30.317790], {}, {
     iconLayout: 'default#image',
-    iconImageHref: '../../icons/map-pin.svg',
-    // iconImageHref: '/maps/d../../jsapi/doc/2.1/examples/_icons/map-pin.svg',
+    iconImageHref: '../../images/map/map-pin.png',
     iconImageSize: [38, 50],
-    iconImageOffset: [-3, -42]
+    iconImageOffset: [-35, -42]
   });
   myMap.geoObjects.add(myPlacemark);
 }
+
