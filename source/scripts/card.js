@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     catalogList.appendChild(card);
   }
 
-  // Карточки
+  // Список карточек
 
   addProductCard({
     imageUrl: "images/products/white-1@2x.png",
@@ -88,4 +88,34 @@ document.addEventListener("DOMContentLoaded", function () {
     milkType: "amimal",
     country: "ethiopia"
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterForm = document.querySelector(".catalog__form.filter");
+
+  function filterProducts() {
+    const selectedMilk = document.querySelector("input[name='milk-radio']:checked").value;
+    const selectedCountries = [...document.querySelectorAll("input[name='checkbox-country']:checked")].map(el => el.value);
+
+    const minPrice = parseInt(document.querySelector(".pricerange__input-value--min").value, 10) || 0;
+    const maxPrice = parseInt(document.querySelector(".pricerange__input-value--max").value, 10) || 1000;
+
+    document.querySelectorAll(".catalog__list-item").forEach(card => {
+      const cardMilk = card.dataset.milk;
+      const cardCountry = card.dataset.country;
+      const cardPrice = parseInt(card.querySelector(".card__price").textContent.replace("₽", ""), 10);
+
+      const matchesMilk = selectedMilk === "not-important" || cardMilk === selectedMilk;
+      const matchesCountry = selectedCountries.length === 0 || selectedCountries.includes(cardCountry);
+      const matchesPrice = cardPrice >= minPrice && cardPrice <= maxPrice;
+
+      if (matchesMilk && matchesCountry && matchesPrice) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  filterForm.addEventListener("change", filterProducts);
 });
