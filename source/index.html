@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Интернет-магазин по продаже кофейных напитков Drink2Go</title>
 
-    <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="favicons/180.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
 
   <body class="page__body">
@@ -22,41 +19,37 @@
       <nav class="page-header__nav menu">
         <a class="page-header__logo" href="#">
           <picture>
-            <source
+            <source 
               media="(min-width: 1440px)"
               type="image/svg+xml"
               width="170"
               height="36"
               srcset="images/logo/logo-desktop.svg"
-            />
+            >
             <source
               media="(min-width: 768px)"
               type="image/svg+xml"
               width="82"
               height="36"
               srcset="images/logo/logo-tablet.svg"
-            />
+            >
             <img
               class="page-header__logo-pic"
               src="images/logo/logo-mobile.svg"
               width="32"
               height="36"
               alt="Логотип интернет-магазина Drink2Go"
-            />
+            >
           </picture>
           <p class="page-header__logo-text">
-            Интернет-магазин<br />кофейных напитков
+            Интернет-магазин<br/>кофейных напитков
           </p>
         </a>
 
         <ul class="user-nav">
           <li class="user-nav__item">
             <a class="user-nav__link" href="#">
-              <svg
-                class="user-nav__icon user-nav__icon--account"
-                width="16"
-                height="16"
-              >
+              <svg class="user-nav__icon user-nav__icon--account" width="16" height="16">
                 <use href="icons/stack.svg#account"></use>
               </svg>
               <span class="user-nav__link-text">Войти</span>
@@ -64,21 +57,14 @@
           </li>
           <li class="user-nav__item">
             <a class="user-nav__link" href="#">
-              <svg
-                class="user-nav__icon user-nav__icon--basket"
-                width="16"
-                height="16"
-              >
+              <svg class="user-nav__icon user-nav__icon--basket" width="16" height="16">
                 <use href="icons/stack.svg#basket"></use>
               </svg>
               <span class="user-nav__link-text">Корзина</span>
             </a>
           </li>
           <li class="user-nav__item">
-            <button
-              class="user-nav__toggle user-nav__toggle--open"
-              type="button"
-            >
+            <button class="user-nav__toggle user-nav__toggle--open" type="button">
               <span class="visually-hidden">Открыть меню</span>
               <svg class="user-nav__icon" width="16" height="16">
                 <use href="icons/stack.svg#burger"></use>
@@ -117,57 +103,57 @@
             <div class="slide__img-container">
               <picture>
                 <source
-                  media="(min-width: 1300px)"
+                  media="(min-width: 1440px)"
                   width="600"
                   height="600"
                   type="image/webp"
                   srcset="
-                    images/products/flat_white-desktop@1x.webp 1x,
-                    images/products/flat_white-desktop@2x.webp 2x
+                    images/slider/flat_white-desktop@1x.webp 1x,
+                    images/slider/flat_white-desktop@2x.webp 2x
                   "
-                />
+                >
                 <source
                   media="(min-width: 768px)"
                   width="476"
                   height="476"
                   type="image/webp"
                   srcset="
-                    images/products/flat_white-tablet@1x.webp 1x,
-                    images/products/flat_white-tablet@2x.webp 2x
+                    images/slider/flat_white-tablet@1x.webp 1x,
+                    images/slider/flat_white-tablet@2x.webp 2x
                   "
-                />
+                >
                 <source
                   type="image/webp"
                   srcset="
-                    images/products/flat_white-mobile@1x.webp 1x,
-                    images/products/flat_white-mobile@2x.webp 2x
+                    images/slider/flat_white-mobile@1x.webp 1x,
+                    images/slider/flat_white-mobile@2x.webp 2x
                   "
-                />
+                >
 
                 <source
-                  media="(min-width: 1300px)"
+                  media="(min-width: 1440px)"
                   type="image/png"
                   width="600"
                   height="600"
                   srcset="
-                    images/products/flat_white-desktop@1x.png 1x,
-                    images/products/flat_white-desktop@2x.png 2x
+                    images/slider/flat_white-desktop@1x.png 1x,
+                    images/slider/flat_white-desktop@2x.png 2x
                   "
-                />
+                >
                 <source
                   media="(min-width: 768px)"
                   type="image/png"
                   width="476"
                   height="476"
                   srcset="
-                    images/products/flat_white-tablet@1x.png 1x,
-                    images/products/flat_white-tablet@2x.png 2x
+                    images/slider/flat_white-tablet@1x.png 1x,
+                    images/slider/flat_white-tablet@2x.png 2x
                   "
-                />
+                >
                 <img
                   class="slide__image"
-                  src="images/products/flat_white-mobile@1x.png"
-                  srcset="images/products/flat_white-mobile@2x.png 2x"
+                  src="images/slider/flat_white-mobile@1x.png"
+                  srcset="images/slider/flat_white-mobile@2x.png 2x"
                   width="280"
                   height="280"
                   alt="Кофе Декаф Флэт Уайт"
@@ -203,56 +189,55 @@
                   height="600"
                   type="image/webp"
                   srcset="
-                    images/products/lavender-desktop@1x.webp 1x,
-                    images/products/lavender-desktop@2x.webp 2x
+                    images/slider/lavender-desktop@1x.webp 1x,
+                    images/slider/lavender-desktop@2x.webp 2x
                   "
-                />
+                >
                 <source
                   media="(min-width: 768px)"
                   width="476"
                   height="476"
                   type="image/webp"
                   srcset="
-                    images/products/lavender-tablet@1x.webp 1x,
-                    images/products/lavender-tablet@2x.webp 2x
+                    images/slider/lavender-tablet@1x.webp 1x,
+                    images/slider/lavender-tablet@2x.webp 2x
                   "
-                />
+                >
                 <source
                   type="image/webp"
                   srcset="
-                    images/products/lavender-mobile@1x.webp 1x,
-                    images/products/lavender-mobile@2x.webp 2x
+                    images/slider/lavender-mobile@1x.webp 1x,
+                    images/slider/lavender-mobile@2x.webp 2x
                   "
-                />
-
+                >
                 <source
                   media="(min-width: 1300px)"
                   type="image/png"
                   width="600"
                   height="600"
                   srcset="
-                    images/products/lavender-desktop@1x.png 1x,
-                    images/products/lavender-desktop@2x.png 2x
+                    images/slider/lavender-desktop@1x.png 1x,
+                    images/slider/lavender-desktop@2x.png 2x
                   "
-                />
+                >
                 <source
                   media="(min-width: 768px)"
                   type="image/png"
                   width="476"
                   height="476"
                   srcset="
-                    images/products/lavender-tablet@1x.png 1x,
-                    images/products/lavender-tablet@2x.png 2x
+                    images/slider/lavender-tablet@1x.png 1x,
+                    images/slider/lavender-tablet@2x.png 2x
                   "
-                />
+                >
                 <img
                   class="slide__image"
-                  src="images/products/lavender-mobile@1x.png"
-                  srcset="images/products/lavender-mobile@2x.png 2x"
+                  src="images/slider/lavender-mobile@1x.png"
+                  srcset="images/slider/lavender-mobile@2x.png 2x"
                   width="280"
                   height="280"
                   alt="Кофе Лавандовый Латте"
-                />
+                >
               </picture>
             </div>
             <div class="slide__text-container">
@@ -284,52 +269,51 @@
                   height="600"
                   type="image/webp"
                   srcset="
-                    images/products/espresso-desktop@1x.webp 1x,
-                    images/products/espresso-desktop@2x.webp 2x
+                    images/slider/espresso-desktop@1x.webp 1x,
+                    images/slider/espresso-desktop@2x.webp 2x
                   "
-                />
+                >
                 <source
                   media="(min-width: 768px)"
                   width="476"
                   height="476"
                   type="image/webp"
                   srcset="
-                    images/products/espresso-tablet@1x.webp 1x,
-                    images/products/espresso-tablet@2x.webp 2x
+                    images/slider/espresso-tablet@1x.webp 1x,
+                    images/slider/espresso-tablet@2x.webp 2x
                   "
-                />
+                >
                 <source
                   type="image/webp"
                   srcset="
-                    images/products/espresso-mobile@1x.webp 1x,
-                    images/products/espresso-mobile@2x.webp 2x
+                    images/slider/espresso-mobile@1x.webp 1x,
+                    images/slider/espresso-mobile@2x.webp 2x
                   "
-                />
-
+                >
                 <source
                   media="(min-width: 1300px)"
                   type="image/png"
                   width="600"
                   height="600"
                   srcset="
-                    images/products/espresso-desktop@1x.png 1x,
-                    images/products/espresso-desktop@2x.png 2x
+                    images/slider/espresso-desktop@1x.png 1x,
+                    images/slider/espresso-desktop@2x.png 2x
                   "
-                />
+                >
                 <source
                   media="(min-width: 768px)"
                   type="image/png"
                   width="476"
                   height="476"
                   srcset="
-                    images/products/espresso-tablet@1x.png 1x,
-                    images/products/espresso-tablet@2x.png 2x
+                    images/slider/espresso-tablet@1x.png 1x,
+                    images/slider/espresso-tablet@2x.png 2x
                   "
-                />
+                >
                 <img
                   class="slide__image"
-                  src="images/products/lavender-mobile@1x.png"
-                  srcset="images/products/lavender-mobile@2x.png 2x"
+                  src="images/slider/lavender-mobile@1x.png"
+                  srcset="images/slider/lavender-mobile@2x.png 2x"
                   width="280"
                   height="280"
                   alt="Кофе Тройной Эспрессо"
@@ -369,9 +353,7 @@
         ></div>
 
         <div class="slider__pagination">
-          <span
-            class="slider__pagination-bullet slider__pagination-bullet--active"
-          ></span>
+          <span class="slider__pagination-bullet slider__pagination-bullet--active"></span>
           <span class="slider__pagination-bullet"></span>
           <span class="slider__pagination-bullet"></span>
         </div>
@@ -450,7 +432,7 @@
                   step="10"
                   type="range"
                   class="pricerange__pin pricerange__pin--min"
-                />
+                >
                 <input
                   value="900"
                   min="0"
@@ -458,19 +440,17 @@
                   step="10"
                   type="range"
                   class="pricerange__pin pricerange__pin--max"
-                />
+                >
               </div>
               <div class="pricerange__input-boxes">
-                <label
-                  class="pricerange__input-box pricerange__input-box--from"
-                >
+                <label class="pricerange__input-box pricerange__input-box--from">
                   <input
                     class="pricerange__input-value pricerange__input-value--min"
                     type="text"
                     name="min-value"
                     placeholder="0"
                     value="0"
-                  />
+                  >
                 </label>
 
                 <label class="pricerange__input-box pricerange__input-box--to">
@@ -480,7 +460,7 @@
                     name="max-value"
                     placeholder="900"
                     value="900"
-                  />
+                  >
                 </label>
               </div>
             </fieldset>
@@ -496,11 +476,8 @@
                     value="not-important"
                     id="not-important"
                     checked
-                  />
-                  <label
-                    class="filter__label filter__label--radio"
-                    for="not-important"
                   >
+                  <label class="filter__label filter__label--radio" for="not-important">
                     <span class="filter__text">Неважно</span>
                   </label>
                 </li>
@@ -511,11 +488,8 @@
                     name="milk-radio"
                     value="animal"
                     id="animal"
-                  />
-                  <label
-                    class="filter__label filter__label--radio"
-                    for="animal"
                   >
+                  <label class="filter__label filter__label--radio" for="animal">
                     <span class="filter__text">Только животное</span>
                   </label>
                 </li>
@@ -526,11 +500,8 @@
                     name="milk-radio"
                     value="vegetable"
                     id="vegetable"
-                  />
-                  <label
-                    class="filter__label filter__label--radio"
-                    for="vegetable"
                   >
+                  <label class="filter__label filter__label--radio" for="vegetable">
                     <span class="filter__text">Только растительное</span>
                   </label>
                 </li>
@@ -542,11 +513,8 @@
                     value="no-milk"
                     id="no-milk"
                     disabled
-                  />
-                  <label
-                    class="filter__label filter__label--radio"
-                    for="no-milk"
                   >
+                  <label class="filter__label filter__label--radio" for="no-milk">
                     <span class="filter__text">Без молока</span>
                   </label>
                 </li>
@@ -564,11 +532,8 @@
                     value="brazil"
                     id="brazil"
                     checked
-                  />
-                  <label
-                    class="filter__label filter__label--checkbox"
-                    for="brazil"
                   >
+                  <label class="filter__label filter__label--checkbox" for="brazil">
                     <span class="filter__text filter__text-left">Бразилия</span>
                   </label>
                 </li>
@@ -579,11 +544,8 @@
                     name="checkbox-country"
                     value="ethiopia"
                     id="ethiopia"
-                  />
-                  <label
-                    class="filter__label filter__label--checkbox"
-                    for="ethiopia"
                   >
+                  <label class="filter__label filter__label--checkbox" for="ethiopia">
                     <span class="filter__text filter__text-left">Эфиопия</span>
                   </label>
                 </li>
@@ -594,11 +556,8 @@
                     name="checkbox-country"
                     value="columbia"
                     id="columbia"
-                  />
-                  <label
-                    class="filter__label filter__label--checkbox"
-                    for="columbia"
                   >
+                  <label class="filter__label filter__label--checkbox" for="columbia">
                     <span class="filter__text filter__text-left">Колумбия</span>
                   </label>
                 </li>
@@ -609,14 +568,9 @@
                     name="checkbox-country"
                     value="costa-rica"
                     id="costa-rica"
-                  />
-                  <label
-                    class="filter__label filter__label--checkbox"
-                    for="costa-rica"
                   >
-                    <span class="filter__text filter__text-left"
-                      >Коста-Рика</span
-                    >
+                  <label class="filter__label filter__label--checkbox" for="costa-rica">
+                    <span class="filter__text filter__text-left">Коста-Рика</span>
                   </label>
                 </li>
                 <li class="filter__item">
@@ -627,11 +581,8 @@
                     value="peru"
                     id="peru"
                     disabled
-                  />
-                  <label
-                    class="filter__label filter__label--checkbox"
-                    for="peru"
                   >
+                  <label class="filter__label filter__label--checkbox" for="peru">
                     <span class="filter__text filter__text-left">Перу</span>
                   </label>
                 </li>
@@ -639,10 +590,7 @@
             </fieldset>
 
             <div class="filter__buttons">
-              <button
-                class="filter__button filter__button--submit button"
-                type="submit"
-              >
+              <button class="filter__button filter__button--submit button" type="submit">
                 Применить
               </button>
               <button class="filter__button button--reset button" type="reset">
@@ -676,16 +624,14 @@
               </div>
             </fieldset>
           </form>
+          
           <div class="catalog__list-container">
             <div class="catalog__list"></div>
           </div>
         </div>
 
         <div class="catalog__pagination">
-          <button
-            class="catalog__pagination-button catalog__pagination-button--prev"
-            type="button"
-          >
+          <button class="catalog__pagination-button catalog__pagination-button--prev" type="button">
             <svg class="catalog__pagination-button-icon" width="6" height="10">
               <use href="icons/stack.svg#arrow-prev"></use>
             </svg>
@@ -696,20 +642,13 @@
               <a class="catalog__pagination-link" href="#">1</a>
             </li>
             <li class="catalog__pagination-item">
-              <a
-                class="catalog__pagination-link catalog__pagination-link--current"
-                href="#"
-                >2</a
-              >
+              <a class="catalog__pagination-link catalog__pagination-link--current" href="#">2</a>
             </li>
             <li class="catalog__pagination-item">
               <a class="catalog__pagination-link" href="#">3</a>
             </li>
           </ol>
-          <button
-            class="catalog__pagination-button catalog__pagination-button--next"
-            type="button"
-          >
+          <button class="catalog__pagination-button catalog__pagination-button--next" type="button">
             <svg class="catalog__pagination-button-icon" width="6" height="10">
               <use href="icons/stack.svg#arrow-next"></use>
             </svg>
@@ -731,14 +670,14 @@
               <source
                 media="(min-width: 768px)"
                 srcset="images/logo/logo-desktop.svg"
-              />
+              >
               <img
                 class="page-footer__logo-pic"
                 src="images/logo/logo-tablet.svg"
                 width="82"
                 height="36"
                 alt="Логотип сайта Drink2Go"
-              />
+              >
             </picture>
             <p class="page-footer__logo-text">
               Интернет-магазин кофейных напитков
@@ -811,17 +750,13 @@
             <svg class="links__address-icon" width="13" height="16">
               <use href="icons/stack.svg#address"></use>
             </svg>
-            <span class="links__address-text"
-              >Санкт-Петербург, набережная реки Карповки, дом&nbsp;5</span
-            >
+            <span class="links__address-text">Санкт-Петербург, набережная реки Карповки, дом&nbsp;5</span>
           </address>
           <div class="links__phone">
             <svg class="links__phone-icon" width="13" height="16">
               <use href="icons/stack.svg#phone"></use>
             </svg>
-            <a class="links__phone-number" href="tel:+79999999999"
-              >+7 (999) 999-99-99</a
-            >
+            <a class="links__phone-number" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </div>
         </div>
 
@@ -850,14 +785,14 @@
               width="130"
               height="188"
               srcset="images/products/, images/products/"
-            />
+            >
             <source
               class="card__image-png"
               type="image/png"
               width="130"
               height="188"
               srcset="images/products/, images/products/"
-            />
+            >
             <img
               class="card__image"
               src="images/products/"
@@ -865,7 +800,7 @@
               width="130"
               height="188"
               alt=""
-            />
+            >
           </picture>
         </a>
         <a class="card__link card__link--title" href="#">

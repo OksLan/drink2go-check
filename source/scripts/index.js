@@ -130,5 +130,6 @@ function init() {
   );
   myMap.geoObjects.add(myPlacemark);
 }
+
 /*======= Catalogue ========================================================*/
 showCards(cards);

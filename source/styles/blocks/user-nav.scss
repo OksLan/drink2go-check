@@ -50,6 +50,12 @@
   }
 }
 
+.user-nav__link:hover .user-nav__icon,
+.user-nav__link:focus .user-nav__icon,
+.user-nav__link:active .user-nav__icon {
+  fill: $base-primary;
+}
+
 .user-nav__link-text {
   display: none;
 
@@ -59,10 +65,14 @@
   }
 }
 
-.user-nav__link:hover .user-nav__icon,
-.user-nav__link:focus .user-nav__icon,
-.user-nav__link:active .user-nav__icon {
-  fill: $base-primary;
+.user-nav__link-text:hover,
+.user-nav__link-text:focus,
+.user-nav__link-text:active {
+  color: $base-primary;
+}
+
+.user-nav__link-text:active {
+  background: $base-secondary;
 }
 
 .user-nav__link:active {
