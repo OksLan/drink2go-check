@@ -78,6 +78,14 @@
   border-radius: 4px;
 }
 
+.pricerange__input-value::placeholder,
+.pricerange__input-value::-webkit-input-placeholder,  /* Chrome, Safari */
+.pricerange__input-value::-moz-placeholder,           /* Firefox */
+.pricerange__input-value:-ms-input-placeholder,       /* Internet Explorer */
+.pricerange__input-value:-moz-placeholder {
+  color: $base-grey !important;
+}
+
 .pricerange__input-value:focus {
   border-color: $primary-darker;
 }

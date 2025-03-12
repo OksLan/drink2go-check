@@ -23,7 +23,7 @@ const cards = [
     title: "Pitch Black",
     descript: "Самый крепкий в мире кофе из Колумбии, никакого молока",
     milk: "no-milk",
-    country: "colombia",
+    country: "columbia",
     price: "550",
   },
   {
@@ -53,15 +53,15 @@ const cards = [
     country: "ethiopia",
     price: "725",
   },
-  {
-    foto: "yellow-6@1x",
-    foto_2x: "yellow-6@2x",
-    title: "Медовый Капуччино",
-    descript: "Бодрящая арабика с медом и маточным молочком",
-    milk: "animal",
-    country: "ethiopia",
-    price: "725",
-  },
+  // {
+  //   foto: "yellow-6@1x",
+  //   foto_2x: "yellow-6@2x",
+  //   title: "Медовый Капуччино",
+  //   descript: "Бодрящая арабика с медом и маточным молочком",
+  //   milk: "animal",
+  //   country: "ethiopia",
+  //   price: "725",
+  // },
 ];
 export { cards };
 
@@ -99,28 +99,103 @@ export function showCards(cards) {
   }
 }
 
-
 // фильтры
 const filters = document.querySelector(".catalog__form");
 filters.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  // console.log("submit!");
-  // console.log(filters["min-value"].value);
-  // console.log(filters["max-value"].value);
-  // console.log(filters["milk-radio"].value);
+   // console.log("submit!");
+   // console.log(filters["min-value"].value);
+   // console.log(filters["max-value"].value);
+   // console.log(filters["milk-radio"].value);
 
-  const countries = Array.from(
+  const selectedMilk = filters["milk-radio"].value; // Выбранный тип молока
+  const selectedCountries = Array.from(
     filters.querySelectorAll(".filter__box--checkbox:checked")
-  );
-  const c = countries.map((country) => country.id);
-  // console.log(c);
+  ).map((country) => country.id);
 
   catalog.innerHTML = "";
 
   for (const card of cards) {
-    //   console.log(c.includes(card.country), card.country);
-    if (card.milk === filters["milk-radio"].value && c.includes(card.country)) {
+    const matchesMilk = selectedMilk === "not-important" || card.milk === selectedMilk;
+    const matchesCountry = selectedCountries.length === 0 || selectedCountries.includes(card.country);
+
+    if (matchesMilk && matchesCountry) {
       addCard(card);
     }
   }
 });
+
+// reset
+const resetButton = filters.querySelector(".button--reset");
+
+resetButton.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  
+  filters.reset();
+
+  catalog.innerHTML = "";
+  showCards(cards);
+
+  resetButton.blur();
+});
+
+
+/* pricerange */
+const ranges = document.querySelectorAll(".pricerange__pin");
+const valueMin = document.querySelector(".pricerange__input-value--min");
+const valueMax = document.querySelector(".pricerange__input-value--max");
+
+function updatePriceValues() {
+  let minVal = Number(ranges[0].value);
+  let maxVal = Number(ranges[1].value);
+
+  if (minVal > maxVal) {
+    [ranges[0].value, ranges[1].value] = [maxVal, minVal];
+    minVal = Number(ranges[0].value);
+    maxVal = Number(ranges[1].value);
+  }
+
+  valueMin.value = minVal;
+  valueMax.value = maxVal;
+
+  ranges[0].style.backgroundImage =
+    ranges[1].style.backgroundImage = `linear-gradient(to right, #e2e2e2 0%, #e2e2e2 ${
+      (minVal / 1000) * 100
+    }%, #9070ec ${(minVal / 1000) * 100}%, #9070ec ${(maxVal / 1000) * 100}%, #e2e2e2 ${
+      (maxVal / 1000) * 100
+    }%, #e2e2e2 100%)`;
+
+  filterByPrice();
+}
+
+ranges.forEach((range) => range.addEventListener("input", updatePriceValues));
+
+/* фильтр по цене */
+function filterByPrice() {
+  const minPrice = Number(valueMin.value);
+  const maxPrice = Number(valueMax.value);
+
+  catalog.innerHTML = "";
+
+  for (const card of cards) {
+    if (card.price >= minPrice && card.price <= maxPrice) {
+      addCard(card);
+    }
+  }
+}
+
+/* убрать/вернуть плейсхолдер в focus */
+document.querySelectorAll(".pricerange__input-value").forEach((input) => {
+  input.addEventListener("focus", () => {
+    input.dataset.placeholder = input.placeholder;
+    input.placeholder = "";
+  });
+
+  input.addEventListener("blur", () => {
+    if (!input.value.trim()) {
+      input.placeholder = input.dataset.placeholder;
+    }
+  });
+});
+
+
