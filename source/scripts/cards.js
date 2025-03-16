@@ -130,7 +130,7 @@ const resetButton = filters.querySelector(".button--reset");
 
 resetButton.addEventListener("click", (evt) => {
   evt.preventDefault();
-  
+
   filters.reset();
 
   catalog.innerHTML = "";
@@ -198,4 +198,31 @@ document.querySelectorAll(".pricerange__input-value").forEach((input) => {
   });
 });
 
+/* сортировка */
+const sortingSelect = document.querySelector(".sorting__list");
 
+sortingSelect.addEventListener("change", () => {
+  const selectedOption = sortingSelect.value;
+  let sortedCards = [...cards];
+
+  switch (selectedOption) {
+    case "cheap-first":
+      sortedCards.sort((a, b) => a.price - b.price);
+      break;
+    case "expensive-first":
+      sortedCards.sort((a, b) => b.price - a.price);
+      break;
+    case "pop-first":
+      sortedCards.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+      break;
+    default:
+      sortedCards = [...cards];
+  }
+
+  catalog.innerHTML = "";
+  showCards(sortedCards);
+});
+
+/* пагинация */
+let currentPage = 1;
+const cardsPerPage = 6;
