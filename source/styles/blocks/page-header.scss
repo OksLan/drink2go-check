@@ -34,16 +34,16 @@
 }
 
 .page-header__logo-pic {
-    width: 32px;
-    height: 36px;
+  width: 32px;
+  height: 36px;
 
-    @media screen and (width >= 768px) {
-      width: 82px;
-    }
+  @media screen and (width >= 768px) {
+    width: 82px;
+  }
 
-    @media screen and (width >= 1440px) {
-      width: 170px;
-    }
+  @media screen and (width >= 1440px) {
+    width: 170px;
+  }
 }
 
 .page-header__logo-text {

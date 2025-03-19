@@ -1,7 +1,7 @@
 .links {
   position: relative;
   margin-bottom: 20px;
-  padding: 0 20px 28px 20px;
+  padding: 0 20px 28px;
   flex: 0;
 
   @media screen and (width >= 768px) {
@@ -35,7 +35,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   color: $base-primary;
   margin-bottom: 18px;
 
@@ -53,7 +53,7 @@
   margin-bottom: 16px;
 }
 
-.links__item:last-child{
+.links__item:last-child {
   margin-bottom: 0;
 }
 
@@ -61,7 +61,7 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   color: $base-black;
   text-transform: uppercase;
 }

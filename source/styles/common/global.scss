@@ -75,7 +75,7 @@ select {
   -moz-appearance: none;
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   cursor: pointer;
 }
 
@@ -85,7 +85,7 @@ select {
   font-weight: 700;
   color: $base-primary;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
 

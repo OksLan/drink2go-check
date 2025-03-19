@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,7 +12,7 @@
     <link rel="manifest" href="manifest.webmanifest">
 
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
 
   <body class="page__body">
@@ -19,7 +20,7 @@
       <nav class="page-header__nav menu">
         <a class="page-header__logo" href="#">
           <picture>
-            <source 
+            <source
               media="(min-width: 1440px)"
               type="image/svg+xml"
               width="170"
@@ -42,7 +43,7 @@
             >
           </picture>
           <p class="page-header__logo-text">
-            Интернет-магазин<br/>кофейных напитков
+            Интернет-магазин<br>кофейных напитков
           </p>
         </a>
 
@@ -76,16 +77,16 @@
         <div class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current">Главная</a>
+              <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link">Каталог</a>
+              <a class="main-nav__link" href="#">Каталог</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link">Доставка</a>
+              <a class="main-nav__link" href="#">Доставка</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link">О нас</a>
+              <a class="main-nav__link" href="#">О нас</a>
             </li>
           </ul>
         </div>
@@ -98,6 +99,7 @@
       </h1>
 
       <section class="slider hero" data-test="hero">
+        <h2 class="visually-hidden">Промо</h2>
         <div class="slides-wrapper">
           <div class="slide slide--one slide--active">
             <div class="slide__img-container">
@@ -123,6 +125,8 @@
                   "
                 >
                 <source
+                  width="280"
+                  height="280"
                   type="image/webp"
                   srcset="
                     images/slider/flat_white-mobile@1x.webp 1x,
@@ -157,7 +161,7 @@
                   width="280"
                   height="280"
                   alt="Кофе Декаф Флэт Уайт"
-                />
+                >
               </picture>
             </div>
             <div class="slide__text-container">
@@ -204,6 +208,8 @@
                   "
                 >
                 <source
+                  width="280"
+                  height="280"
                   type="image/webp"
                   srcset="
                     images/slider/lavender-mobile@1x.webp 1x,
@@ -284,6 +290,8 @@
                   "
                 >
                 <source
+                  width="280"
+                  height="280"
                   type="image/webp"
                   srcset="
                     images/slider/espresso-mobile@1x.webp 1x,
@@ -317,7 +325,7 @@
                   width="280"
                   height="280"
                   alt="Кофе Тройной Эспрессо"
-                />
+                >
               </picture>
             </div>
             <div class="slide__text-container">
@@ -343,12 +351,10 @@
 
         <div
           class="slider-button-prev"
-          type="button"
           aria-label="Посмотреть предыдущий слайд"
         ></div>
         <div
           class="slider-button-next"
-          type="button"
           aria-label="Посмотреть следующий слайд"
         ></div>
 
@@ -426,20 +432,20 @@
               <legend class="filter__title">Цена</legend>
               <div class="pricerange">
                 <input
+                  class="pricerange__pin pricerange__pin--min"
                   value="0"
                   min="0"
                   max="1000"
                   step="10"
                   type="range"
-                  class="pricerange__pin pricerange__pin--min"
                 >
                 <input
+                  class="pricerange__pin pricerange__pin--max"
                   value="900"
                   min="0"
                   max="1000"
                   step="10"
                   type="range"
-                  class="pricerange__pin pricerange__pin--max"
                 >
               </div>
               <div class="pricerange__input-boxes">
@@ -623,7 +629,7 @@
               </div>
             </fieldset>
           </form>
-          
+
           <div class="catalog__list-container">
             <div class="catalog__list"></div>
           </div>
@@ -657,6 +663,7 @@
       </section>
 
       <section class="map" data-test="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
         <div id="ymap" style="width: 100%"></div>
       </section>
     </main>
@@ -818,6 +825,6 @@
       </article>
     </template>
 
-    <script src="scripts/index.js" defer="defer" type="module"></script>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

@@ -35,7 +35,6 @@
 }
 
 .sorting__list {
-  padding-right: 25px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -45,8 +44,7 @@
   line-height: 24px;
   width: 165px;
   color: $base-primary;
-  background-color: transparent;
-  padding: 4px 29px 4px 10px;
+  padding: 4px 25px 4px 10px;
   cursor: pointer;
   border: none;
   background: url("../../icons/arrow-down.svg") no-repeat right 8px center;

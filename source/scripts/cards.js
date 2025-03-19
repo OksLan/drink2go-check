@@ -103,10 +103,10 @@ export function showCards(cards) {
 const filters = document.querySelector(".catalog__form");
 filters.addEventListener("submit", (evt) => {
   evt.preventDefault();
-   // console.log("submit!");
-   // console.log(filters["min-value"].value);
-   // console.log(filters["max-value"].value);
-   // console.log(filters["milk-radio"].value);
+  // console.log("submit!");
+  // console.log(filters["min-value"].value);
+  // console.log(filters["max-value"].value);
+  // console.log(filters["milk-radio"].value);
 
   const selectedMilk = filters["milk-radio"].value; // Выбранный тип молока
   const selectedCountries = Array.from(

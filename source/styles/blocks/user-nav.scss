@@ -43,7 +43,7 @@
     padding: 32px 20px;
     box-sizing: border-box;
     text-transform: uppercase;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -105,9 +105,9 @@
   background-image: url("/source/icons/burger.svg");
   display: block;
 
-    @media screen and (width >= 768px) {
-      display: none;
-    }
+  @media screen and (width >= 768px) {
+    display: none;
+  }
 }
 
 .user-nav__toggle--close {

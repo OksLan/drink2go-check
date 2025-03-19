@@ -13,7 +13,6 @@
   @media screen and (width >= 1440px) {
     margin-top: 20px;
   }
-
 }
 
 .copyright__text {
@@ -38,6 +37,6 @@
   fill: $base-primary;
 }
 
-.copyright__link:active .copyright__link-icon{
+.copyright__link:active .copyright__link-icon {
   fill: $primary-darker;
 }

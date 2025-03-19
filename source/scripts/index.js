@@ -88,5 +88,5 @@ function init() {
   myMap.geoObjects.add(myPlacemark);
 }
 
-/*======= Catalogue ========================================================*/
+/*====== Catalogue ======*/
 showCards(cards);
