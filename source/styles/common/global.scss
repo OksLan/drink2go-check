@@ -65,9 +65,9 @@ legend {
   line-height: 24px;
 }
 
-// input::placeholder {
-//   color: $base-grey !important;
-// }
+input::placeholder {
+  color: $base-grey !important;
+}
 
 select {
   appearance: none;

@@ -189,6 +189,7 @@ document.querySelectorAll(".pricerange__input-value").forEach((input) => {
   input.addEventListener("focus", () => {
     input.dataset.placeholder = input.placeholder;
     input.placeholder = "";
+    input.value = "";
   });
 
   input.addEventListener("blur", () => {

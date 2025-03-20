@@ -86,7 +86,8 @@
   color: $base-grey !important;
 }
 
-.pricerange__input-value:focus {
+.pricerange__input-value:focus,
+.pricerange__input-value:focus-visible {
   border-color: $primary-darker;
 }
 
