@@ -86,9 +86,12 @@
   color: $base-grey !important;
 }
 
-.pricerange__input-value:focus,
-.pricerange__input-value:focus-visible {
+.pricerange__input-value:focus {
   border-color: $primary-darker;
+}
+
+.pricerange__input-value:focus-visible {
+  outline: $primary-darker;
 }
 
 .pricerange__input-value:disabled {
