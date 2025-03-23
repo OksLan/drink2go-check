@@ -137,8 +137,8 @@ resetButton.addEventListener("click", (evt) => {
 
 /* pricerange */
 const ranges = document.querySelectorAll(".pricerange__pin");
-const valueMin = document.querySelector(".pricerange__input-value--min");
-const valueMax = document.querySelector(".pricerange__input-value--max");
+const valueMin = document.querySelector(".price-range__input--min");
+const valueMax = document.querySelector(".price-range__input--max");
 
 function updatePriceValues() {
   let minVal = Number(ranges[0].value);
@@ -180,7 +180,7 @@ function filterByPrice() {
 }
 
 /* убрать/вернуть плейсхолдер в focus */
-document.querySelectorAll(".pricerange__input-value").forEach((input) => {
+document.querySelectorAll(".price-range__input").forEach((input) => {
   input.addEventListener("focus", () => {
     input.dataset.placeholder = input.placeholder;
     input.placeholder = "";

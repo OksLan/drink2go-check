@@ -448,7 +448,7 @@
                   type="range"
                 >
               </div>
-              <div class="pricerange__input-boxes">
+              <!-- <div class="pricerange__input-boxes">
                 <label class="pricerange__input-box pricerange__input-box--from">
                   <input
                     class="pricerange__input-value pricerange__input-value--min"
@@ -461,6 +461,27 @@
                 <label class="pricerange__input-box pricerange__input-box--to">
                   <input
                     class="pricerange__input-value pricerange__input-value--max"
+                    type="text"
+                    name="max-value"
+                    placeholder="900"
+                    value=""
+                  >
+                </label>
+              </div> -->
+
+              <div class="price-range__inputs">
+                <label class="price-range__label price-range__label--from">
+                  <input
+                    class="price-range__input price-range__input--min"
+                    type="text"
+                    name="min-value"
+                    placeholder="0"
+                    value=""
+                  >
+                </label>
+                <label class="price-range__label price-range__label--to">
+                  <input
+                    class="price-range__input price-range__input--max"
                     type="text"
                     name="max-value"
                     placeholder="900"

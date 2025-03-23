@@ -50,7 +50,7 @@
 }
 
 /* окошки */
-.pricerange__input-boxes {
+.price-range__inputs {
   display: flex;
   position: relative;
   margin-bottom: 24px;
@@ -60,11 +60,11 @@
   }
 }
 
-.pricerange__input-box--from {
+.price-range__label--from {
   margin-right: 30px;
 }
 
-.pricerange__input-value {
+.price-range__input {
   width: 100%;
   min-height: 40px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -78,28 +78,28 @@
   border-radius: 4px;
 }
 
-.pricerange__input-value::placeholder,
-.pricerange__input-value::-webkit-input-placeholder,  /* Chrome, Safari */
-.pricerange__input-value::-moz-placeholder,           /* Firefox */
-.pricerange__input-value:-ms-input-placeholder,       /* Internet Explorer */
-.pricerange__input-value:-moz-placeholder {
+.price-range__input::placeholder,
+.price-range__input::-webkit-input-placeholder,  /* Chrome, Safari */
+.price-range__input::-moz-placeholder,           /* Firefox */
+.price-range__input:-ms-input-placeholder,       /* Internet Explorer */
+.price-range__input:-moz-placeholder {
   color: $base-grey !important;
 }
 
-.pricerange__input-value:focus {
+.price-range__input:focus {
   border-color: $primary-darker;
 }
 
-.pricerange__input-value:focus-visible {
+.price-range__input:focus-visible {
   outline: $primary-darker;
 }
 
-.pricerange__input-value:disabled {
+.price-range__input:disabled {
   border-color: $light-grey;
   background-color: transparent;
 }
 
-.pricerange__input-boxes::after {
+.price-range__inputs::after {
   content: "";
   position: absolute;
   width: 10px;
