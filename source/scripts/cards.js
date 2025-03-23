@@ -53,15 +53,15 @@ const cards = [
     country: "ethiopia",
     price: "725",
   },
-  // {
-  //   foto: "yellow-6@1x",
-  //   foto_2x: "yellow-6@2x",
-  //   title: "Медовый Капуччино",
-  //   descript: "Бодрящая арабика с медом и маточным молочком",
-  //   milk: "animal",
-  //   country: "ethiopia",
-  //   price: "725",
-  // },
+  {
+    foto: "yellow-6@1x",
+    foto_2x: "yellow-6@2x",
+    title: "Медовый Капуччино",
+    descript: "Бодрящая арабика с медом и маточным молочком",
+    milk: "animal",
+    country: "ethiopia",
+    price: "725",
+  },
 ];
 export { cards };
 
@@ -103,11 +103,6 @@ export function showCards(cards) {
 const filters = document.querySelector(".catalog__form");
 filters.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  // console.log("submit!");
-  // console.log(filters["min-value"].value);
-  // console.log(filters["max-value"].value);
-  // console.log(filters["milk-radio"].value);
-
   const selectedMilk = filters["milk-radio"].value; // Выбранный тип молока
   const selectedCountries = Array.from(
     filters.querySelectorAll(".filter__box--checkbox:checked")
@@ -225,5 +220,41 @@ sortingSelect.addEventListener("change", () => {
 });
 
 /* пагинация */
-let currentPage = 1;
-const cardsPerPage = 6;
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = [...document.querySelectorAll(".catalog__list-item")];
+  const pagination = document.querySelector(".catalog__pagination-list");
+  const [prevBtn, nextBtn] = document.querySelectorAll(".catalog__pagination-button");
+  const cardsPerPage = 6;
+  let currentPage = 1;
+
+  const showPage = (page) => {
+      const start = (page - 1) * cardsPerPage;
+      cards.forEach((card, i) => card.style.display = i >= start && i < start + cardsPerPage ? "block" : "none");
+      updatePagination(page);
+  };
+
+  const updatePagination = (page) => {
+      pagination.innerHTML = "";
+      const totalPages = Math.ceil(cards.length / cardsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+          pagination.innerHTML += `<li class="catalog__pagination-item">
+              <a href="#" class="catalog__pagination-link${i === page ? " catalog__pagination-link--current" : ""}" data-page="${i}">${i}</a>
+          </li>`;
+      }
+      prevBtn.disabled = page === 1;
+      nextBtn.disabled = page === totalPages;
+  };
+
+  pagination.addEventListener("click", (e) => {
+      if (e.target.matches(".catalog__pagination-link")) {
+          e.preventDefault();
+          currentPage = +e.target.dataset.page;
+          showPage(currentPage);
+      }
+  });
+
+  prevBtn.addEventListener("click", () => currentPage > 1 && showPage(--currentPage));
+  nextBtn.addEventListener("click", () => currentPage < Math.ceil(cards.length / cardsPerPage) && showPage(++currentPage));
+
+  showPage(currentPage);
+});

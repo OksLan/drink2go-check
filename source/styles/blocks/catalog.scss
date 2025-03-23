@@ -108,6 +108,10 @@
   background-color: $light-grey;
 }
 
+.catalog__pagination-button:disabled .catalog__pagination-button-text {
+  color: $base-white;
+}
+
 .catalog__pagination-button-icon {
   width: 10px;
   height: auto;
